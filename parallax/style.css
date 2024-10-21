@@ -21,7 +21,15 @@ html, body{
     flex-direction: column;
     align-items: center;
 }
-
+.desc{
+    background-color: #313131;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .data{
     height: 25%;
     display: flex;
@@ -29,6 +37,11 @@ html, body{
     align-items: center;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.data span{
+    color: red;
+    font-style: italic;
 }
 
 .second-img-div{
@@ -41,4 +54,12 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ty{
+    border: 1px solid white;
+    padding: 20px;
+}
+.ty p{
+    font-size: 1.5rem;
 }
