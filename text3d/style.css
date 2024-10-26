@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Kanit:900');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(50deg, #e0b2ff 0%,#fbfeb2c9 25%, #f0b2ff 50%, #fff4b2 50%,#f5b10b 75%, #fff4b2 100%);
+}
+div{
+    width: 100%;
+    text-align: center;
+    color: #8cf9dd;
+    text-shadow: 1px 1px black, 1px -1px black,
+                -1px 1px black, -1px -1px black,
+                 1px 0px black, -1px 0px black,
+                 0px 1px black, 0px -1px black,
+                 2px 2px #f5b10b, 3px 3px #f5b10b,
+                 4px 4px #f5b10b, 5px 5px #f5b10b,
+                 6px 6px #f5b10b, 7px 7px #f5b10b,
+                 8px 8px #f5b10b, 9px 9px #f5b10b,
+                 10px 10px #f5b10b, 10px 15px 20px  rgba(0, 0, 0, 0.5);
+    font-family: 'Kanit', sans-serif;
+    margin: 0 auto;
+    font-size: 7vw;
+    letter-spacing: 2vw;
+    text-outline: 2px 2px black;
+}
+
+.day-data{
+    top: 0;
+    font-size: 2vw;
+    line-height: 2.3em;
+    color: #b2ffc9;
+    letter-spacing: 1vw;
+    text-shadow: 1px 1px black,1px -1px black,-1px 1px black,-1px -1px black, 1px 0px black,-1px 0px black,0px 1px black, 0px -1px black, 2px 2px #f5b10b, 3px 3px #f5b10b, 4px 4px #f5b10b, 5px 5px #f5b10b;
+}
