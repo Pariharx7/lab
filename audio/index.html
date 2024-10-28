@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chenab</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        background: url("https://images.unsplash.com/photo-1623684003870-fca853da2d21?q=80&w=1834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        background-position: center;
+      }
+      .audio-dabba {
+        display:none;
+      }
+      .cd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        position: relative;
+        animation: dabba 7s;
+      }
+      .cd span {
+        font-family: "Playwrite GB S", cursive;
+        font-size: 11rem;
+        font-weight: bolder;
+        background-color: #2f8d46;
+        /* background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png"); */
+        background: url("https://images.unsplash.com/photo-1623684003870-fca853da2d21?q=80&w=1834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        position: relative;
+        transition: all 1s ease-in;
+      }
+      .cd span:hover{
+        animation-name: naach;
+        animation-duration: 5s;
+      }
+
+      @keyframes naach {
+        from{
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(100%);
+        }
+      }
+      @keyframes dabba {
+        0%{
+            transform: translateY(0);
+            transition: all 7s step-start;
+        }
+        50%{
+            scale: 0.7;
+            transition: all 7s linear;
+        }
+        100%{
+            transform: translateY(100%);
+            transition: all 7s ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="audio-dabba">
+        <audio autoplay loop controls>
+          <source
+            src="https://raag.fm/files/mp3/128/Hindi/2620295/Paar%20Chanaa%20De%20-%20(Raag.Fm).mp3"
+          />
+        </audio>
+      </div>
+      <div class="cd">
+        <span>C</span>
+        <span>H</span>
+        <span>E</span>
+        <span>N</span>
+        <span>A</span>
+        <span>B</span>
+      </div>
+    </div>
+  </body>
+</html>
