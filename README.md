@@ -12,3 +12,5 @@ This repository will consist of the projects that i will build while learning th
 - audio
 - bgChanger
 - effects
+- camera
+
