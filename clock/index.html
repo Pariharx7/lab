@@ -20,19 +20,32 @@
         .clock-div{
             text-align: center;
             margin: 0 auto;
-            top: 30%;
+            top: 15%;
             position: relative;
             padding: 0;
         }
         h1{
             font-size: 5vw;
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="clock-div">
+    <div class="clock-div" id="clock-div">
 
     </div>
-    
+
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    const cd = document.getElementById('clock-div');
+    
+    const dateToday = new Date();
+    const hours = dateToday.getHours();
+    const minutes = dateToday.getMinutes();
+    const dateTodayIs = dateToday.toDateString();
+
+    cd.innerHTML = `<h1>CLOCK</h1> <br /> <h1>${hours} : ${minutes}</h1> <br/> <h1>${dateTodayIs}</h1>`;
+</script>
 </html>
