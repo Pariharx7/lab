@@ -33,13 +33,15 @@
             background-color: #ffbabd;
             height: 0;
             width: 500px;
+            background-image: url(./you_won.jpeg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: auto;
          }
          .text{
-            opacity: 0;
             color: #3a3a3a;
             font-family: "Press Start 2P", cursive;
             text-align: center;
-            background: url(./you_won.jpeg);
          }
     </style>
 </head>
@@ -52,9 +54,35 @@
         </div>
         <div class="full">
             <div class="text">
-                <h1>Peace</h1>
             </div>
         </div>
     </div>    
+    <script src="https://use.fontawesome.com/4687d61c54.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#maximize').on('click', function(){
+                $('.full').animate({
+                    height : '40vh'
+                });
+                $('.text').animate({
+                    opacity: '1'
+                })
+            });
+            $('#minimize').on('click', function(){
+                $('.full').animate({
+                    height : '0',
+                });
+                $('.text').animate({
+                    opacity: '0'
+                })
+            });
+            $('#close').on('click', function(){
+                $('.window').animate({
+                    opacity : '0'
+                });
+            });
+        })
+    </script>
 </body>
 </html>
