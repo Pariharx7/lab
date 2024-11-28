@@ -60,28 +60,14 @@
     <script src="https://use.fontawesome.com/4687d61c54.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-        $(function(){
-            $('#maximize').on('click', function(){
-                $('.full').animate({
-                    height : '40vh'
-                });
-                $('.text').animate({
-                    opacity: '1'
-                })
-            });
-            $('#minimize').on('click', function(){
-                $('.full').animate({
-                    height : '0',
-                });
-                $('.text').animate({
-                    opacity: '0'
-                })
-            });
-            $('#close').on('click', function(){
-                $('.window').animate({
-                    opacity : '0'
-                });
-            });
+        const minimize = document.getElementById('minimize')
+        const maximize = document.getElementById('maximize')
+        const close = document.getElementById('close')
+        const window_div = document.querySelector('.window')
+        console.log(window_div);
+        
+        close.addEventListener('click',() => {
+            window_div.style.display = "none";
         })
     </script>
 </body>
