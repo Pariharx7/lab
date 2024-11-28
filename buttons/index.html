@@ -30,8 +30,14 @@
          .full{
             margin: auto;
             padding: 10px;
+            height: 39vh;
+            width: 500px;
+         }
+         .active{
+            margin: auto;
+            padding: 10px;
             background-color: #ffbabd;
-            height: 0;
+            height: 39vh;
             width: 500px;
             background-image: url(./you_won.jpeg);
             background-size: 100% 100%;
@@ -42,6 +48,7 @@
             color: #3a3a3a;
             font-family: "Press Start 2P", cursive;
             text-align: center;
+            height: 400px;
          }
     </style>
 </head>
@@ -64,8 +71,17 @@
         const maximize = document.getElementById('maximize')
         const close = document.getElementById('close')
         const window_div = document.querySelector('.window')
-        console.log(window_div);
+        const fullsizeMaximize = document.querySelector('.full')
         
+        console.log(maximize);
+        
+
+        maximize.addEventListener('click', () =>{
+            fullsizeMaximize.classList.add('.active');
+            console.log(fullsizeMaximize.classList);
+            
+        })
+
         close.addEventListener('click',() => {
             window_div.style.display = "none";
         })
