@@ -22,28 +22,49 @@
             -moz-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
         }
+        h1{
+            font-size: 55px;
+            font-weight: bold;
+        }
 
         button{
             background-color: #4c4e70;
             font-family: "Poiret One", cursive;
             font-size: 22px;
+            font-weight: bold;
             cursor: pointer;
             color: white;
             padding: 10px;
             width: 15vw;
-            border: 2px solid black;
+            border: 3px solid black;
             border-radius: 11px;
+            background-color: #fff;
+            color: #000;
+        }
+        input{
+            width: 77px;
+            height: 53px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="day">
-        Select a color: <input type="color" id="col" />
-        <h1>Colour Changes</h1>
+        <h3>Select a color:</h3> <input type="color" id="col" />
+        <h1>{ Colour Changes }</h1>
         <button>Change</button>
     </div>
     <script type="text/javascript">
+        const input = document.querySelector("input");
+        const textToChangeColor = document.querySelector("h1");
+        const btn = document.querySelector("button");
 
+        btn.addEventListener("click", () => {
+            textToChangeColor.style.color = input.value;
+            btn.style.borderColor = input.value;
+            btn.style.color = input.value;
+            
+        })
     </script>
 </body>
 </html>
