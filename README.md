@@ -6,11 +6,15 @@ This repository will consist of the projects that i will build while learning th
 
 ## Project Lists
 
-- stars
-- parallax
-- text3d
 - audio
 - bgChanger
-- effects
+- buttons
 - camera
+- clock
+- effects
+- inputColorChanger
+- neon-text
+- parallax
+- stars
+- text3d
 
