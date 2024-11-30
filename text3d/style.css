@@ -29,5 +29,5 @@ div{
     margin: 0 auto;
     font-size: 7vw;
     letter-spacing: 2vw;
-    text-outline: 2px 2px black;
+    outline: 2px 2px black;
 }
