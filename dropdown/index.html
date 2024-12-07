@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop Down</title>
     <style>
-        *{
+        body,html{
             padding: 0;
             margin: 0;
-            box-sizing: border-box;
             height: 100%;
         }
         #navigation{
@@ -65,8 +64,8 @@
     </style>
 </head>
 <body>
-    <div class="navigation">
-        <div class="menu">MENU</div>
+    <div id="navigation">
+        <div id="menu">MENU</div>
         <ul>
             <li>Home</li>
             <li>About Us</li>
@@ -77,6 +76,11 @@
     </div>
 </body>
 <script>
-    
+    const menu = document.querySelector("#menu");
+    const list_items = document.querySelector("ul");
+
+    menu.addEventListener("click", () => {
+        list_items.classList.add('vix');
+    })
 </script>
 </html>
