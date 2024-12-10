@@ -17,10 +17,17 @@
             font-size: 30px;
             overflow: hidden;
         }
-        .clock-div{
+        #date-div{
             text-align: center;
             margin: 0 auto;
             top: 15%;
+            position: relative;
+            padding: 0;
+        }
+        .clock-div{
+            text-align: center;
+            margin: 0 auto;
+            top: 25%;
             position: relative;
             padding: 0;
         }
@@ -28,14 +35,23 @@
             font-size: 5vw;
             margin: 0;
         }
+        .text{
+            text-align: center;
+            margin: 0 auto;
+            top: 19%;
+            font-size: 2.5vw;
+            position: relative;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
-    <h1>CLOCK</h1> <br />
-    <div class="clock-div" id="clock-div">
-
-    </div>
     <div id="date-div">
+    </div>
+    <div class="text">
+        CLOCK
+    </div>
+    <div class="clock-div" id="clock-div">
 
     </div>
 
@@ -43,13 +59,23 @@
 <script type="text/javascript">
     const cd = document.getElementById('clock-div');
     const dd = document.getElementById('date-div');
+    const dateNow = new Date();
+    const dateTodayIs = dateNow.toDateString();
     
-    const dateToday = new Date();
-    const hours = dateToday.getHours();
-    const minutes = dateToday.getMinutes();
-    const dateTodayIs = dateToday.toDateString();
+    function updateTime() {
+        const dateToday = new Date();
+        const hours = dateToday.getHours();
+        const minutes = dateToday.getMinutes();
+        const seconds = dateToday.getSeconds();
 
-    cd.innerHTML = ` <h1>${hours} : ${minutes}</h1> <br/> `;
-    dd.innerHTML = `<h1>${dateTodayIs}</h1>`
+        const fMinutes = minutes < 10 ? '0' + minutes : minutes;
+        const fSeconds = seconds < 10 ? '0' + seconds : seconds;
+    
+        cd.innerHTML = ` <h1>${hours} : ${fMinutes} : ${fSeconds}</h1> `;
+    
+    }
+    dd.innerHTML = `<h1>${dateTodayIs}</h1>`;
+    
+    setInterval(updateTime, 1000)
 </script>
 </html>
