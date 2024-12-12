@@ -27,18 +27,54 @@
         button{
             margin: 0;
             border: none;
+            color: white;
+            background-color: #d8115a;
+            font-size: 50px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            border-radius: 22px;
+        }
+        #text{
+            background-color: #86d3ef;
+            color: white;
             padding: 10vh;
             padding-left: 0;
             padding-right: 0;
+            border-radius: 19px;
+        }
+        #song{
+            background-color: #86d3ef;
         }
     </style>
 </head>
 <body>
     <div class="content">        
         <button id="song">Song</button>
-        <button id="artist">Artists</button>
+        <button id="artists">Artists</button>
         <button id="hook">Hook</button>
-        <button id="text">Mulaqat</button>
+        <div id="text">Mulaqat</div>
     </div>
 </body>
+<script>
+    const song = document.querySelector("#song")
+    const artists = document.querySelector("#artists")
+    const hook = document.querySelector("#hook")
+    const text = document.querySelector("#text")
+    const buttons = document.querySelector("button")
+
+    song.addEventListener('click', () => {
+        buttons.style.backgroundColor = "#d8115a";
+        song.style.backgroundColor = "#86d3ef";
+    })
+    artists.addEventListener('click', () => {
+        buttons.style.backgroundColor = "#d8115a";
+        artists.style.backgroundColor = "#86d3ef";
+        
+    })
+    hook.addEventListener('click', () => {
+        buttons.style.backgroundColor = "#d8115a";
+        hook.style.backgroundColor = "#86d3ef";
+    })
+</script>
 </html>
