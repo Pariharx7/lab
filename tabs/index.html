@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabs</title>
     <style>
-
+        body, html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #a8edea 0%, #fed6e3 100%);
+            font-size: 50px;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        button{
+            margin: 0;
+            border: none;
+            padding: 10vh;
+            padding-left: 0;
+            padding-right: 0;
+        }
     </style>
 </head>
 <body>
     <div class="content">        
-        <div id="song">Song</div>
-        <div id="artist">Artist</div>
-        <div id="hook">Hook</div>
+        <button id="song">Song</button>
+        <button id="artist">Artists</button>
+        <button id="hook">Hook</button>
+        <button id="text">Mulaqat</button>
     </div>
 </body>
 </html>
