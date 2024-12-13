@@ -64,11 +64,14 @@
     const text = document.querySelector("#text")
 
     song.addEventListener('click', () => {
+        text.style.visibility = "visible";
         song.style.backgroundColor = "#86d3ef";
         artists.style.backgroundColor = "#d8115a";
         hook.style.backgroundColor = "#d8115a";
+        text.innerHTML = `Gallan Gallan`;
     })
     artists.addEventListener('click', () => {
+        text.style.visibility = "visible";
         artists.style.backgroundColor = "#86d3ef";
         song.style.backgroundColor = "#d8115a";
         hook.style.backgroundColor = "#d8115a";
