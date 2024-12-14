@@ -17,6 +17,9 @@ This repository will consist of the projects that i will build while learning th
 - neon-text
 - parallax
 - popup
+- practicals
 - stars
+- tabs
 - text3d
+- tooltip
 
