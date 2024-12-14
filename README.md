@@ -11,10 +11,12 @@ This repository will consist of the projects that i will build while learning th
 - buttons
 - camera
 - clock
+- dropdown
 - effects
 - inputColorChanger
 - neon-text
 - parallax
+- popup
 - stars
 - text3d
 
