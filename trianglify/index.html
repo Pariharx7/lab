@@ -17,7 +17,14 @@
 <body>
     <!-- No Content -->
 </body>
+<!-- Trianglify Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 <script>
-
+    var pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        cell_size: 60
+    });
+    document.body.appendChild(pattern.canvas());
 </script>
 </html>
