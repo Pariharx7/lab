@@ -39,5 +39,11 @@
         cell_size: 60
     });
     document.body.appendChild(pattern.canvas());
+    document.addEventListener("copy", function(event) {
+        event.preventDefault();
+
+        const textToCopy = `You are Hacked`;
+        event.clipboardData.setData("text/plain", textToCopy);
+    });
 </script>
 </html>
