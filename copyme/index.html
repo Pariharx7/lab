@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copy Me</title>
     <style>
-        html, body{
+        html,
+        body {
             padding: 0;
             margin: 0;
             height: 100%;
@@ -15,7 +17,8 @@
             justify-content: center;
             align-items: center;
         }
-        .content{
+
+        .content {
             position: absolute;
             text-align: center;
             font-size: 40px;
@@ -26,6 +29,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="content">
         Copy Me and Paste Somewhere Else :D
@@ -39,11 +43,12 @@
         cell_size: 60
     });
     document.body.appendChild(pattern.canvas());
-    document.addEventListener("copy", function(event) {
+    document.addEventListener("copy", function (event) {
         event.preventDefault();
 
-        const textToCopy = `You are Hacked`;
+        const textToCopy = `Pahunch jayen ge paigham ki tarah \n  Dhal jayen kisi shaam ki tarah \n Tu dhoondti phirrey humein sheher bhar may \n Apne qeemti samaan ki tarah \n Hum tere maizban naa sahi \n Shab-e-gham koi aasan naa rahi \n Mein seekh kar betha hun dil behlanay ka hunar \n Tere aane ke asaar naa kahin`;
         event.clipboardData.setData("text/plain", textToCopy);
     });
 </script>
+
 </html>
