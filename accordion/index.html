@@ -6,7 +6,38 @@
     <title>Accordion</title>
 </head>
 <style>
-    
+    body, html{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
+    }
+    .content{
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    button{
+        height: 5vh;
+        width: 50vw;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        height: 60px;
+    }
+    #one,#two,#three{
+        height: 0;
+        opacity: 0;
+        width: 50vw;
+        font-size: 20px;
+        color: #243949;
+        text-align: center;
+    }
 </style>
 <body>
     <div class="content">
