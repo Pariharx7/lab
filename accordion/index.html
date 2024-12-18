@@ -56,6 +56,18 @@
     </div>
 </body>
 <script>
+    const btn1 = document.querySelector("#button1");
+    const btn2 = document.querySelector("#button2");
+    const btn3 = document.querySelector("#button3");
+
+    const box1 = document.querySelector("#one");
+    const box2 = document.querySelector("#two");
+    const box3 = document.querySelector("#three");
+// value can be done as true when clicked and if value is true only then we can close it
+    btn1.addEventListener("click", ()=>{
+        box1.style.height = "10vh";    
+        box1.style.opacity = "1";    
+    })
 
 </script>
 </html>
