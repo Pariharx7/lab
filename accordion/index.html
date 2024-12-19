@@ -67,23 +67,29 @@
     
     btn1.addEventListener("click", ()=>{
         if(box1.style.display == "block")  {
-            box1.style.display = "none";    
+            box1.style.display = "none"; 
+            box1.style.transition = "height 0.3s ease, opacity 0.5s ease-in";   
         } else{
-            box1.style.display = "block";  
+            box1.style.display = "block";
+            box1.style.transition = "height 0.3s ease, opacity 0.5s ease-in";     
         }
     })
     btn2.addEventListener("click",()=>{
         if(box2.style.display=="block"){
             box2.style.display = "none";
+            box2.style.transition = "height 0.3s ease, opacity 0.5s ease-in";   
         }else{
             box2.style.display="block";
+            box2.style.transition = "height 0.3s ease, opacity 0.5s ease-in";   
         }
     })
     btn3.addEventListener("click", ()=>{
         if(box3.style.display == "block"){
             box3.style.display = "none";
+            box3.style.transition = "height 0.3s ease, opacity 0.5s ease-in";   
         } else{
             box3.style.display = "block";
+            box3.style.transition = "height 0.3s ease, opacity 0.5s ease-in";   
         }
     })
 
