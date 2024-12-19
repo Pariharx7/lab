@@ -67,28 +67,21 @@
     
     btn1.addEventListener("click", ()=>{
         if(box1.style.display == "block")  {
-            console.log("blocke ");
-            
             box1.style.display = "none";    
         } else{
             box1.style.display = "block";  
-            console.log("kay thuy")
         }
     })
-    btn1.addEventListener("click",()=>{
-        if(isTrue){
-            isTrue = false
-            box1.style.height = "10vh";    
-            box1.style.opacity = "1";
+    btn2.addEventListener("click",()=>{
+        if(box2.style.display="block"){
+            box1.style.display = "none";
+        }else{
+            box2.style.display="block";
         }
-    })
-    btn2.addEventListener("click", ()=>{
-        box2.style.height = "10vh";    
-        box2.style.opacity = "1";    
     })
     btn3.addEventListener("click", ()=>{
-        box3.style.height = "10vh";    
-        box3.style.opacity = "1";    
+        box2.style.height = "10vh";    
+        box2.style.opacity = "1";    
     })
 
 </script>
