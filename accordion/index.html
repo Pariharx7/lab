@@ -63,10 +63,32 @@
     const box1 = document.querySelector("#one");
     const box2 = document.querySelector("#two");
     const box3 = document.querySelector("#three");
-// value can be done as true when clicked and if value is true only then we can close it
+    // value can be done as true when clicked and if value is true only then we can close it
+
+    let isTrue = false
+    console.log(box1.style.height);
+    
     btn1.addEventListener("click", ()=>{
-        box1.style.height = "10vh";    
-        box1.style.opacity = "1";    
+        // isTrue = true
+        // box1.style.height = "10vh";    
+        // box1.style.opacity = "1";  
+        if(box1.style.height == 0 && box1.style.opacity == 0)  {
+            console.log("inside ");
+            
+            box1.style.height = "10vh";    
+            box1.style.opacity = "1";
+        } else{
+            box1.style.height = "0";    
+            box1.style.opacity = "0";
+            console.log("else")
+        }
+    })
+    btn1.addEventListener("click",()=>{
+        if(isTrue){
+            isTrue = false
+            box1.style.height = "10vh";    
+            box1.style.opacity = "1";
+        }
     })
     btn2.addEventListener("click", ()=>{
         box2.style.height = "10vh";    
