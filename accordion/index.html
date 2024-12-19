@@ -31,8 +31,9 @@
         height: 60px;
     }
     #one,#two,#three{
-        height: 0;
-        opacity: 0;
+        height: 10vh;
+        display: none;
+        opacity: 1;
         width: 50vw;
         font-size: 20px;
         color: #243949;
@@ -63,24 +64,15 @@
     const box1 = document.querySelector("#one");
     const box2 = document.querySelector("#two");
     const box3 = document.querySelector("#three");
-    // value can be done as true when clicked and if value is true only then we can close it
-
-    let isTrue = false
-    console.log(box1.style.height);
     
     btn1.addEventListener("click", ()=>{
-        // isTrue = true
-        // box1.style.height = "10vh";    
-        // box1.style.opacity = "1";  
-        if(box1.style.height == 0 && box1.style.opacity == 0)  {
-            console.log("inside ");
+        if(box1.style.display == "block")  {
+            console.log("blocke ");
             
-            box1.style.height = "10vh";    
-            box1.style.opacity = "1";
+            box1.style.display = "none";    
         } else{
-            box1.style.height = "0";    
-            box1.style.opacity = "0";
-            console.log("else")
+            box1.style.display = "block";  
+            console.log("kay thuy")
         }
     })
     btn1.addEventListener("click",()=>{
