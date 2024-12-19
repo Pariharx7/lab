@@ -73,15 +73,18 @@
         }
     })
     btn2.addEventListener("click",()=>{
-        if(box2.style.display="block"){
-            box1.style.display = "none";
+        if(box2.style.display=="block"){
+            box2.style.display = "none";
         }else{
             box2.style.display="block";
         }
     })
     btn3.addEventListener("click", ()=>{
-        box2.style.height = "10vh";    
-        box2.style.opacity = "1";    
+        if(box3.style.display == "block"){
+            box3.style.display = "none";
+        } else{
+            box3.style.display = "block";
+        }
     })
 
 </script>
