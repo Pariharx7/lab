@@ -23,4 +23,4 @@ This repository will consist of the projects that i will build while learning th
 - tabs
 - text3d
 - tooltip
-
+- trianglify
