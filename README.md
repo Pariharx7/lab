@@ -12,6 +12,7 @@ This repository will consist of the projects that i will build while learning th
 - buttons
 - camera
 - clock
+- copyme
 - dropdown
 - effects
 - inputColorChanger
