@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository will consist of the projects that i will build while learning the concepts in web development.
+This repository will consist of the projects that i will be building while learning the concepts in web development.
 
 ## Project Lists
 
