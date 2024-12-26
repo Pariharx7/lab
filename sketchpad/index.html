@@ -16,9 +16,16 @@
     <canvas id="canvas"></canvas>
 </body>
 <script>
+    let draw;
     const canvas = document.getElementById("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
+
+    canvas.addEventListener('mousedown', function(e){
+        draw = true;
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(e.pageX, e.pageY, 20,20);
+    })
 </script>
 </html>
