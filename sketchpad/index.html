@@ -27,5 +27,15 @@
         ctx.fillStyle = '#000000';
         ctx.fillRect(e.pageX, e.pageY, 20,20);
     })
+    canvas.addEventListener('mousemove', function(e){
+        if(draw){
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(e.pageX, e.pageY,20,20);
+        }
+    })
+    canvas.addEventListener('mouseup', () => {
+        draw = false;
+    })
 </script>
 </html>
