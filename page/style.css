@@ -35,3 +35,12 @@ li:hover{
     color: gray;
     cursor: pointer;
 }
+span{
+    cursor: pointer;
+    font-size: 40px;
+    padding: 10px;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
