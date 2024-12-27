@@ -1,0 +1,37 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+nav{
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+}
+
+nav span{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+li:hover{
+    background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
+    color: gray;
+    cursor: pointer;
+}
