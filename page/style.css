@@ -45,3 +45,8 @@ header{
     display: flex;
     justify-content: center;
 }
+#show:hover{
+    background-color: black;
+    color: #d9e3e8;
+    border-bottom-right-radius: 9px;
+}
