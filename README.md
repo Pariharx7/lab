@@ -19,6 +19,7 @@ This repository will consist of the projects that i will be building while learn
 - inputColorChanger
 - magic-btn
 - neon-text
+- page
 - parallax
 - popup
 - practicals
