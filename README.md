@@ -6,7 +6,7 @@ This repository will consist of the projects that i will be building while learn
 
 ## Project Lists
 
-- accordion
+- [Accordion](www.github.com/pariharx7/accordion) | [Accordion](github.io/pariharx7.accordion)
 - audio
 - bgChanger
 - buttons
