@@ -24,6 +24,7 @@ This repository will consist of the projects that i will be building while learn
 - popup
 - practicals
 - preloader
+- sketchpad
 - stars
 - tabs
 - text3d
