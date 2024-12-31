@@ -8,7 +8,7 @@ This repository will consist of the projects that i will be building while learn
 ###   Repository & Live Links
 - 📁 [Accordion](https://github.com/Pariharx7/lab/tree/main/accordion) | [Accordion](https://pariharx7.github.io/lab/accordion/) 🔗
 - 📁 [Audio](https://github.com/Pariharx7/lab/tree/main/audio) | [audio](https://pariharx7.github.io/lab/audio/) 🔗
-- [bgChanger](https://github.com/Pariharx7/lab/tree/main/bgChanger) |
+- [bgChanger](https://github.com/Pariharx7/lab/tree/main/bgChanger) | [bgChanger](https://pariharx7.github.io/lab/bgChanger)
 - buttons
 - camera
 - clock
