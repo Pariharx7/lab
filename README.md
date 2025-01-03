@@ -11,7 +11,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [bgChanger](https://github.com/Pariharx7/lab/tree/main/bgChanger) | [bgChanger](https://pariharx7.github.io/lab/bgChanger) 🔗
 - 📁 [buttons](https://github.com/Pariharx7/tree/main/buttons) | [buttons](https://pariharx7.github.io/lab/buttons) 🔗
 - 📁 [camera](https://github.com/Pariharx7/lab/tree/main/camera) | [camera](https://pariharx7.github.io/lab/camera) 🔗
-- [clock](https://github.com/Pariharx7/lab/tree/main/clock) | [clock](https://pariharx7.github.io/lab/clock) 🔗
+- 📁 [clock](https://github.com/Pariharx7/lab/tree/main/clock) | [clock](https://pariharx7.github.io/lab/clock) 🔗
 - copyme
 - dropdown
 - effects
