@@ -12,7 +12,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [buttons](https://github.com/Pariharx7/tree/main/buttons) | [buttons](https://pariharx7.github.io/lab/buttons) 🔗
 - 📁 [camera](https://github.com/Pariharx7/lab/tree/main/camera) | [camera](https://pariharx7.github.io/lab/camera) 🔗
 - 📁 [clock](https://github.com/Pariharx7/lab/tree/main/clock) | [clock](https://pariharx7.github.io/lab/clock) 🔗
-- [copyme](https://github.com/Pariharx7/lab/tree/main/copyme) | [copyme](https://pariharx7.github.io/lab/copyme)
+- 📁 [copyme](https://github.com/Pariharx7/lab/tree/main/copyme) | [copyme](https://pariharx7.github.io/lab/copyme) 🔗
 - dropdown
 - effects
 - faceDetection
