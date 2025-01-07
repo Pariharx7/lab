@@ -15,7 +15,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [copyme](https://github.com/Pariharx7/lab/tree/main/copyme) | [copyme](https://pariharx7.github.io/lab/copyme) 🔗
 - 📁 [dropdown](https://www.github.com/Pariharx7/lab/tree/main/dropdown) | [dropdown](https://pariharx7.github.io/lab/dropdown) 🔗
 - 📁 [effects](https://www.github.com/Pariharx7/lab/tree/main/effects) | [effects](https://pariharx7.github.io/lab/effects) 🔗
-- faceDetection
+- [faceDetection](https://www.github.com/Pariharx7/lab/tree/main/faceDetection) | 
 - inputColorChanger
 - magic-btn
 - neon-text
