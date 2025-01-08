@@ -16,7 +16,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [dropdown](https://www.github.com/Pariharx7/lab/tree/main/dropdown) | [dropdown](https://pariharx7.github.io/lab/dropdown) 🔗
 - 📁 [effects](https://www.github.com/Pariharx7/lab/tree/main/effects) | [effects](https://pariharx7.github.io/lab/effects) 🔗
 - 📁 [faceDetection](https://www.github.com/Pariharx7/lab/tree/main/faceDetection) | [faceDetection](https://pariharx7.github.io/lab/faceDetection) 🔗
-- [inputColorChanger](https://www.github.com/Pariharx7/tree/main/inputColorChanger) | [inputColorChanger](https://pariharx7.github.io/lab/inputColorChanger)
+- 📁 [inputColorChanger](https://www.github.com/Pariharx7/tree/main/inputColorChanger) | [inputColorChanger](https://pariharx7.github.io/lab/inputColorChanger)
 - magic-btn
 - neon-text
 - page
