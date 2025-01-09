@@ -17,7 +17,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [effects](https://www.github.com/Pariharx7/lab/tree/main/effects) | [effects](https://pariharx7.github.io/lab/effects) 🔗
 - 📁 [faceDetection](https://www.github.com/Pariharx7/lab/tree/main/faceDetection) | [faceDetection](https://pariharx7.github.io/lab/faceDetection) 🔗
 - 📁 [inputColorChanger](https://www.github.com/Pariharx7/tree/main/inputColorChanger) | [inputColorChanger](https://pariharx7.github.io/lab/inputColorChanger) 🔗
-- 📁 [magic-btn](https://www.github.com/Pariharx7/tree/main/magic-btn) | [magic-btn](https://pariharx7.github.io/lab/magic-btn)
+- 📁 [magic-btn](https://www.github.com/Pariharx7/tree/main/magic-btn) | [magic-btn](https://pariharx7.github.io/lab/magic-btn) 🔗
 - neon-text
 - page
 - parallax
