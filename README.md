@@ -21,7 +21,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [neon-text](https://www.github.com/Pariharx7/tree/main/neon-text) | [neon-text](https://pariharx7.github.io/neon-text) 🔗
 - 📁 [page](https://www.github.com/Pariharx7/tree/main/page) | [page](https://pariharx7.github.io/lab/page) 🔗
 - 📁 [parallax](https://www.github.com/Pariharx7/tree/main/parallax) | [parallax](https://pariharx7.github.io/lab/parallax) 🔗
-- popup
+- [popup](https://www.github.com/Pariharx7/tree/main/popup)
 - practicals
 - preloader
 - sketchpad
