@@ -23,7 +23,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [parallax](https://www.github.com/Pariharx7/tree/main/parallax) | [parallax](https://pariharx7.github.io/lab/parallax) 🔗
 - 📁 [popup](https://www.github.com/Pariharx7/tree/main/popup) | [popup](https://pariharx7.github.io/lab/popup) 🔗
 - 📁 [practicals](https://www.Pariharx7/tree/main/practicals) | [practicals](https://www.pariharx7.github.io/practicals) 🔗
-- preloader
+- [preloader](https://www.github.com/Pariharx7/tree/main/preloader) | 
 - sketchpad
 - stars
 - tabs
