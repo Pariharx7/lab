@@ -24,7 +24,7 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [popup](https://www.github.com/Pariharx7/tree/main/popup) | [popup](https://pariharx7.github.io/lab/popup) 🔗
 - 📁 [practicals](https://www.Pariharx7/tree/main/practicals) | [practicals](https://www.pariharx7.github.io/lab/practicals) 🔗
 - 📁 [preloader](https://www.github.com/Pariharx7/tree/main/preloader) | [preloader](https://www.pariharx7.github.io/lab/preloader) 🔗
-- [sketchpad](https://www.github.com/Pariharx7/tree/main/sketchpad) | [sketchpad](https://pariharx7.github.io/lab/sketchpad)
+- 📁 [sketchpad](https://www.github.com/Pariharx7/tree/main/sketchpad) | [sketchpad](https://pariharx7.github.io/lab/sketchpad) 🔗
 - stars
 - tabs
 - text3d
