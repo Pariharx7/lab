@@ -28,5 +28,5 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [stars](https://www.github.com/Pariharx7/tree/main/stars) | [stars](https://pariharx7.github.io/lab/stars) 🔗
 - 📁 [tabs](https://www.github.com/Pariharx7/tree/main/tabs) | [tabs](https://pariharx7.github.io/lab/tabs) 🔗
 - 📁 [text3d](https://www.github.com/Pariharx7/tree/main/text3d) | [text3d](https://pariharx7.github.io/lab/text3d) 🔗
-- tooltip
+- [tooltip]()
 - trianglify
