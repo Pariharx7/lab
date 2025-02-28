@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         .calculator_body{
             width: 100vw;
             border: 5px solid blue;
@@ -14,9 +17,9 @@
         .calculator_keys{
             border: 2px solid red;
             display: grid;
+            grid-gap: 1px;
             height: 300px;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
         }
         .key-operator{
             grid-row: 1;
