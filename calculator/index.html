@@ -24,13 +24,19 @@
             max-width: 15em;
             overflow: hidden;
         }
+        .calculator_display{
+            background-color: #222222;
+            color: #fff;
+            padding: 0.5em 0.75em;
+            text-align: right;
+        }
         .calculator_keys{
-            border: 2px solid red;
+            background-color: #999;
             display: grid;
             grid-gap: 1px;
             grid-template-columns: repeat(4,1fr);
         }
-        .calculator_keys{
+        .calculator_keys > *{
             background-color: #fff;
             padding: 0.5em 1.25em;
             position: relative;
