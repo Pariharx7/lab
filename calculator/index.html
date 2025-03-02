@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
+        *{
+            border: none;
+        }
         html{
             box-sizing: border-box;
         }
@@ -12,8 +15,8 @@
             margin: 0;
             align-items: center;
             /* display: flex; */
+            height: 90vh;
             background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
-            height: 100vh;
             /* justify-content: center; */
         }
         .calculator_body{
@@ -25,13 +28,15 @@
             max-width: 27em;
             overflow: hidden;
             height: 50vh;
+            margin-top: 12em;
         }
         .calculator_display{
             background-color: #222222;
             color: #fff;
-            padding: 0.5em 0.75em;
+            padding: 0.9em 0.75em;
             text-align: right;
             height: 7vh;
+            font-size: 1.1em;
         }
         .calculator_keys{
             background-color: #999;
