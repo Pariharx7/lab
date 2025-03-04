@@ -107,7 +107,10 @@
         if(e.target.matches('button')){
             const key = e.target
             const action = key.dataset.action
-            
+
+            if(!action){
+                console.log('number key!');
+            }
         }
     })
 </script>
