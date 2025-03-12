@@ -130,6 +130,8 @@
             ){
                 console.log('Operator Key1')
                 key.classList.add('is-depressed')
+
+                calculator.dataset.previousKeyType = 'operator'
             }
 
             if(action === 'decimal'){
