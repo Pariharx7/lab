@@ -151,6 +151,8 @@
                 const firstValue = calculator.dataset.firstValue
                 const operator = calculator.dataset.operator
                 const secondValue = displayedNum
+
+                cal_display.textContent = calculate(firstValue, operator,secondValue)
             }
         }
     })
