@@ -147,6 +147,7 @@
 
             if(action === 'clear'){
                 console.log('clear key');
+                calculator.dataset.previousKeyType = 'clear'
             }
             if(action === 'calculate'){
                 console.log('equal key');
@@ -155,6 +156,8 @@
                 const secondValue = displayedNum
 
                 cal_display.textContent = calculate(firstValue, operator,secondValue)
+
+                calculator.dataset.previousKeyType = 'calculate'
             }
         }
     })
