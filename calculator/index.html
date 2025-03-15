@@ -121,6 +121,7 @@
                 }else{
                     cal_display.textContent = displayedNum + keyContent
                 }
+                calculator.dataset.previousKeyType = 'number'
             }
 
             if(
@@ -141,6 +142,7 @@
             if(action === 'decimal'){
                 console.log('decimal key');
                 cal_display.textContent = displayedNum + '.'
+                calculator.dataset.previousKeyType = 'decimal'
             }
 
             if(action === 'clear'){
