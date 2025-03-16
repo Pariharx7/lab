@@ -141,6 +141,11 @@
 
             if(action === 'decimal'){
                 console.log('decimal key');
+
+                if(!displayedNum.includes('.')){
+                    cal_display.textContent = displayedNum + '.'
+                }
+
                 cal_display.textContent = displayedNum + '.'
                 calculator.dataset.previousKeyType = 'decimal'
             }
