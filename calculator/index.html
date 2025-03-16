@@ -144,9 +144,10 @@
 
                 if(!displayedNum.includes('.')){
                     cal_display.textContent = displayedNum + '.'
+                }else if(previousKeyType === 'operator'){
+                    cal_display.textContent = '0.'
                 }
 
-                cal_display.textContent = displayedNum + '.'
                 calculator.dataset.previousKeyType = 'decimal'
             }
 
