@@ -131,6 +131,13 @@
                 action === 'divide'
             ){
                 console.log('Operator Key1')
+
+
+                const firstValue = calculator.dataset.firstValue
+                const operator = calculator.dataset.operator
+                const secondValue = displayedNum
+
+
                 key.classList.add('is-depressed')
 
                 calculator.dataset.previousKeyType = 'operator'
