@@ -144,6 +144,9 @@
                 const calcValue = calculate(firstValue, operator, secondValue)
                 cal_display.textContent = calcValue
 
+                calculator.dataset.firstValue = calcValue
+                
+
                 key.classList.add('is-depressed')
 
                 calculator.dataset.previousKeyType = 'operator'
