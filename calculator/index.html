@@ -137,7 +137,7 @@
                 const operator = calculator.dataset.operator
                 const secondValue = displayedNum
 
-                if(firstValue && operator){
+                if(firstValue && operator && previousKeyType !== 'operator'){
                     cal_display.textContent = calculate(firstValue, operator, secondValue)
                 }
 
