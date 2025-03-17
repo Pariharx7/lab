@@ -139,13 +139,13 @@
 
                 if(firstValue && operator && previousKeyType !== 'operator'){
                     cal_display.textContent = calculate(firstValue, operator, secondValue)
+                    const calcValue = calculate(firstValue, operator, secondValue)
+                    cal_display.textContent = calcValue
+    
+                    calculator.dataset.firstValue = calcValue
+                } else{
+                    calculator.dataset.firstValue = displayedNum
                 }
-
-                const calcValue = calculate(firstValue, operator, secondValue)
-                cal_display.textContent = calcValue
-
-                calculator.dataset.firstValue = calcValue
-                
 
                 key.classList.add('is-depressed')
 
