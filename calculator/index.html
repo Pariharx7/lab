@@ -181,6 +181,7 @@
                 if(firstValue){
                     if(previousKeyType === 'calculate'){
                         firstValue = displayedNum
+                        secondValue = calculator.dataset.modValue
                     }
                     cal_display.textContent = calculate(firstValue, operator,secondValue)
                 }
