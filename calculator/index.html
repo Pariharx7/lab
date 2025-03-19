@@ -162,7 +162,7 @@
 
                 if(!displayedNum.includes('.')){
                     cal_display.textContent = displayedNum + '.'
-                }else if(previousKeyType === 'operator'){
+                }else if(previousKeyType === 'operator' || previousKeyType === 'calculate'){
                     cal_display.textContent = '0.'
                 }
 
