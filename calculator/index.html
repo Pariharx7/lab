@@ -174,9 +174,10 @@
                 console.log('clear key');
                 calculator.dataset.previousKeyType = 'clear'
             }
-            
-            if(action !== 'clear'){
 
+            if(action !== 'clear'){
+                const clearButton = calculator.querySelector('[data-action=clear]')
+                clearButton.textContent = 'CE'
             }
 
             if(action === 'calculate'){
