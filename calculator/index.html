@@ -177,9 +177,10 @@
                     calculator.dataset.modValue = ''
                     calculator.dataset.operator = ''
                     calculator.dataset.previousKeyType = ''
+                } else{
+                    key.textContent = 'AC'
                 }
                 cal_display.textContent = 0
-                key.textContent = 'AC'
                 calculator.dataset.previousKeyType = 'clear'
             }
 
