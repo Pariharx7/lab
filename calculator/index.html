@@ -173,7 +173,10 @@
             if(action === 'clear'){
                 console.log('clear key');
                 if(key.textContent === 'AC'){
-                    
+                    calculator.dataset.firstValue = ''
+                    calculator.dataset.modValue = ''
+                    calculator.dataset.operator = ''
+                    calculator.dataset.previousKeyType = ''
                 }
                 cal_display.textContent = 0
                 key.textContent = 'AC'
