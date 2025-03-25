@@ -214,8 +214,8 @@
         if(operator === 'add'){
             return firstValue + parseFloat(n2)
         }
-        else if(operator === 'subtract'){
-            result = parseFloat(n1) - parseFloat(n2)
+        if(operator === 'subtract'){
+            return parseFloat(n1) - parseFloat(n2)
         }
         else if(operator === 'multiply'){
             result = parseFloat(n1) * parseFloat(n2)
