@@ -217,8 +217,8 @@
         if(operator === 'subtract'){
             return parseFloat(n1) - parseFloat(n2)
         }
-        else if(operator === 'multiply'){
-            result = parseFloat(n1) * parseFloat(n2)
+        if(operator === 'multiply'){
+            return parseFloat(n1) * parseFloat(n2)
         }
         else if(operator === 'divide'){
             result = parseFloat(n1) / parseFloat(n2)
