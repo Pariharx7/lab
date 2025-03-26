@@ -209,21 +209,15 @@
         }
     })
     const calculate = (n1, operator, n2) => {
-        // let result = ''
 
-        if(operator === 'add'){
-            return firstValue + parseFloat(n2)
-        }
-        if(operator === 'subtract'){
-            return parseFloat(n1) - parseFloat(n2)
-        }
-        if(operator === 'multiply'){
-            return parseFloat(n1) * parseFloat(n2)
-        }
-        if(operator === 'divide'){
-            return parseFloat(n1) / parseFloat(n2)
-        }
-        return result
+        if(operator === 'add') return firstValue + parseFloat(n2)
+        
+        if(operator === 'subtract') return parseFloat(n1) - parseFloat(n2)
+        
+        if(operator === 'multiply') return parseFloat(n1) * parseFloat(n2)
+        
+        if(operator === 'divide') return parseFloat(n1) / parseFloat(n2)
+        
     }
 </script>
 </html>
