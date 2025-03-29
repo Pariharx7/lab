@@ -108,6 +108,9 @@
 
             const resultString = createResultString();
 
+            cal_display.textContent = resultString
+            updateCalculatorState()
+
             const key = e.target
             const action = key.dataset.action
             const keyContent = key.textContent
