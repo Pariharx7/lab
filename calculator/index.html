@@ -106,7 +106,19 @@
     keys.addEventListener('click', e => {
         if(e.target.matches('button')){
 
-            const resultString = createResultString();
+            const resultString = createResultString = () => {
+                if(!action){
+                console.log('number key!');
+                if(displayedNum === '0' || previousKeyType === 'operator' ||
+                previousKeyType === 'calculate'
+                ){
+                    return keyContent
+                }else{
+                    cal_display.textContent = displayedNum + keyContent
+                }
+                calculator.dataset.previousKeyType = 'number'
+            }
+            }
 
             cal_display.textContent = resultString
             updateCalculatorState()
@@ -120,17 +132,7 @@
             Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'))
 
             const previousKeyType = calculator.dataset.previousKeyType
-            if(!action){
-                console.log('number key!');
-                if(displayedNum === '0' || previousKeyType === 'operator' ||
-                previousKeyType === 'calculate'
-                ){
-                    cal_display.textContent = keyContent
-                }else{
-                    cal_display.textContent = displayedNum + keyContent
-                }
-                calculator.dataset.previousKeyType = 'number'
-            }
+            
 
             if(
                 action === 'add' ||
