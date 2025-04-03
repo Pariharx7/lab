@@ -108,15 +108,11 @@
 
             const createResultString = () => {
                 if(!action){
-                console.log('number key!');
-                if(displayedNum === '0' || previousKeyType === 'operator' ||
+                return displayedNum === '0' ||      previousKeyType === 'operator' ||
                 previousKeyType === 'calculate'
-                ){
-                    return keyContent
-                }else{
-                    return displayedNum + keyContent
+                ? keyContent
+                : displayedNum + keyContent
                 }
-            }
             }
 
             cal_display.textContent = resultString
