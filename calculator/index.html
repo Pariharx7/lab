@@ -112,7 +112,7 @@
                 previousKeyType === 'calculate'
                 ? keyContent
                 : displayedNum + keyContent
-                }
+                } 
             }
 
             cal_display.textContent = resultString
@@ -165,9 +165,9 @@
                 console.log('decimal key');
 
                 if(!displayedNum.includes('.')){
-                    cal_display.textContent = displayedNum + '.'
+                    return = displayedNum + '.'
                 }else if(previousKeyType === 'operator' || previousKeyType === 'calculate'){
-                    cal_display.textContent = '0.'
+                    return = '0.'
                 }
 
                 calculator.dataset.previousKeyType = 'decimal'
