@@ -164,11 +164,9 @@
             if(action === 'decimal'){
                 console.log('decimal key');
 
-                if(!displayedNum.includes('.')){
-                    return = displayedNum + '.'
-                }else if(previousKeyType === 'operator' || previousKeyType === 'calculate'){
-                    return = '0.'
-                }
+                if(!displayedNum.includes('.'))return  displayedNum + '.'
+                if(previousKeyType === 'operator' || previousKeyType === 'calculate') return  '0.'
+                
 
                 calculator.dataset.previousKeyType = 'decimal'
             }
