@@ -191,10 +191,11 @@
                         firstValue = displayedNum
                         secondValue = calculator.dataset.modValue
                     }
-                    cal_display.textContent = calculate(firstValue, operator,secondValue)
+                    return calculate(firstValue, operator,secondValue)
                 }
-                calculator.dataset.modValue = secondValue
-                calculator.dataset.previousKeyType = 'calculate'
+                else{
+                    return displayedNum
+                }
             }
         }
     })
