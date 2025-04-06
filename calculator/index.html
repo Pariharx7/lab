@@ -187,11 +187,9 @@
 
 
                 if(firstValue){
-                    if(previousKeyType === 'calculate'){
-                        firstValue = displayedNum
-                        secondValue = calculator.dataset.modValue
-                    }
-                    return calculate(firstValue, operator,secondValue)
+                    return previousKeyType === 'calculate'
+                       ? calculate(displayedNum, operator, modValue)
+                       : calculate(firstValue, operator, displayedNum)
                 }
                 else{
                     return displayedNum
