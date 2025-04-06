@@ -177,10 +177,7 @@
                 calculator.dataset.previousKeyType = 'clear'
             }
 
-            if(action !== 'clear'){
-                const clearButton = calculator.querySelector('[data-action=clear]')
-                clearButton.textContent = 'CE'
-            }
+            if(action !== 'clear') return 0
 
             if(action === 'calculate'){
                 console.log('equal key');
