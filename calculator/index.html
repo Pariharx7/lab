@@ -106,7 +106,9 @@
     keys.addEventListener('click', e => {
         if(e.target.matches('button')){
 
-            const createResultString = () => {
+            const createResultString = (key, displayedNum, state) => {
+                
+
                 if(!action){
                 return displayedNum === '0' ||      previousKeyType === 'operator' ||
                 previousKeyType === 'calculate'
