@@ -186,14 +186,13 @@
                 let secondValue = displayedNum
 
 
-                if(firstValue){
-                    return previousKeyType === 'calculate'
-                       ? calculate(displayedNum, operator, modValue)
-                       : calculate(firstValue, operator, displayedNum)
-                }
-                else{
-                    return displayedNum
-                }
+                return firstValue
+                 ? previousKeyType === 'calculate'
+                    ? calculate(displayedNum, operator, modValue)
+                    : calculate(firstValue, operator, displayedNum)
+                
+                : displayedNum
+                
             }
         }
     })
