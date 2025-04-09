@@ -110,6 +110,9 @@
                 const keyContent = key.textContent
                 const action = key.dataset.action
                 const firstValue = state.firstValue
+                const modValue = state.modValue
+                const operator = state.operator
+                
 
                 if(!action){
                 return displayedNum === '0' ||      previousKeyType === 'operator' ||
