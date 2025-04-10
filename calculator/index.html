@@ -109,7 +109,7 @@
             const createResultString = (key, displayedNum, state) => {
                 const keyContent = key.textContent
                 const { action } = key.dataset
-                const {} = state
+                const { firstValue, modValue, operator, previousKeyType } = state
 
                 if(!action){
                 return displayedNum === '0' ||      previousKeyType === 'operator' ||
