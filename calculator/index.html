@@ -111,6 +111,8 @@
                 const { action } = key.dataset
                 const { firstValue, modValue, operator, previousKeyType } = state
 
+                const keyType = getKeyType(key)
+
                 if(!action){
                 return displayedNum === '0' ||      previousKeyType === 'operator' ||
                 previousKeyType === 'calculate'
