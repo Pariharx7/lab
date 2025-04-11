@@ -170,7 +170,7 @@
                 calculator.dataset.operator = action
             }
 
-            if(action === 'decimal'){
+            if(keyType === 'decimal'){
                 console.log('decimal key');
 
                 if(!displayedNum.includes('.'))return  displayedNum + '.'
@@ -179,7 +179,7 @@
 
             }
 
-            if(action === 'clear'){
+            if(keyType === 'clear'){
                 console.log('clear key');
                 if(key.textContent === 'AC'){
                     calculator.dataset.firstValue = ''
