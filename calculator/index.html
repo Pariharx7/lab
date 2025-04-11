@@ -193,9 +193,9 @@
                 calculator.dataset.previousKeyType = 'clear'
             }
 
-            if(action !== 'clear') return 0
+            if(keyType !== 'clear') return 0
 
-            if(action === 'calculate'){
+            if(keyType === 'calculate'){
                 console.log('equal key');
                 let firstValue = calculator.dataset.firstValue
                 const operator = calculator.dataset.operator
