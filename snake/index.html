@@ -58,7 +58,15 @@
         document.addEventListener("keydown", changeDirection)
 
         function main(){
-            
+            if(didGameEnd()) return;
+
+            setTimeout(function onTick() {
+                changingDirection = false;
+                clearCanvas();
+                drawFood();
+                advanceSnake();
+                
+            })
         }
     </script>
 </body>
