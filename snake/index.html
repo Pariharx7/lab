@@ -74,6 +74,9 @@
         function clearCanvas(){
             ctx.fillStyle = CANVAS_BACKGROUND_COLOUR;
             ctx.strokestyle = CANVAS_BORDER_COLOUR;
+
+            ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+            ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
         }
     </script>
 </body>
