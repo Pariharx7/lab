@@ -111,6 +111,8 @@
             const hitRightWall = snake[0].x > gameCanvas.width - 10;
             const hitTopWall = snake[0].y < 0;
             const hitBottomWall = snake[0].y > gameCanvas.height - 10;
+
+            return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall
         }
     </script>
 </body>
