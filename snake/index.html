@@ -124,8 +124,9 @@
             foodY = randomTen(0, gameCanvas.height - 10);
 
             snake.forEach(function isFoodOnSnake(part){
-                
-            })
+                const foodIsOnSnake = part.x == foodX && part.y == foodY;
+                if(foodIsOnSnake) createFood();
+            });
         }
     </script>
 </body>
