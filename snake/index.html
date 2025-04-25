@@ -157,7 +157,11 @@
             const goingUp = dy === -10;
             const goingDown = dy === 10;
             const goingRight = dx === 10;
-            const goingLeft = dx === 10;
+            const goingLeft = dx === -10;
+
+            if(keyPressed === LEFT_KEY && !goingRight){
+                
+            }
         }
     </script>
 </body>
