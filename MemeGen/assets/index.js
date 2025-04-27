@@ -1,0 +1,1 @@
+(function(){const il=document.createElement("link").relList;if(il&&il.supports&&il.supports("modulepreload"))return;for(const X of document.querySelectorAll('link[rel="modulepreload"]'))r(X);new MutationObserver(X=>{for(const Z of X)if(Z.type==="childList")for(const sl of Z.addedNodes)sl.tagName==="LINK"&&sl.rel==="modulepreload"&&r(sl)}).
