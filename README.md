@@ -31,4 +31,4 @@ This repository will consist of the projects that i will be building while learn
 - 📁 [tooltip](https://www.github.com/Pariharx7/tree/main/tooltip) | [tooltip](https://pariharx7.github.io/tooltip) 🔗
 - [trianglify](https://www.github.com/Pariharx7/tree/main/trianglify) | [trianglify](https://pariharx7.github.io/lab/trian)
 - [calculator](https:www.github.com/tree/main/calculator) | [calculator](https://pariharx7/calculator) 
-- .[MemeGen](https://www.github.com/tree/main/MemeGen) | [MemeGen](https://parihar) 
+- .[MemeGen](https://www.github.com/tree/main/MemeGen) | [MemeGen](https://pariharx7) 
