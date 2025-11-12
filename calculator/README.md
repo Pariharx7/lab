@@ -3,3 +3,9 @@
 # Description
 
 This project creates a Calculator using HTML, CSS and Javascript.
+
+## Technologies Used
+ - HTML
+ - CSS
+ - JS
+
