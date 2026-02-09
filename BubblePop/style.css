@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #414141;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.score-div{
+    border: 1px solid white;
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+}
+
+#playground{
+    cursor: crosshair;
+    height: 90vh;
+}
