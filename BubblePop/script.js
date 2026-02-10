@@ -65,8 +65,8 @@ canvasBox.addEventListener('click', (e) => {
 
 
         if(distance< b.radius) {
-            bubblesArray.splice(index, 1);
             count++;
+            bubblesArray.splice(index, 1);
             console.log("Popped");
             console.log("Count : "+ count);
         }
