@@ -1,10 +1,11 @@
+const scroreboard = document.querySelector(".scoreboard");
 const canvasBox = document.querySelector("#playground");
 const ctx = canvasBox.getContext("2d");
 canvasBox.width = window.innerWidth;
 canvasBox.height = window.innerHeight;
 
 let bubblesArray = [];
-
+let count = 0;
 
 // #user input
 
@@ -65,8 +66,11 @@ canvasBox.addEventListener('click', (e) => {
 
         if(distance< b.radius) {
             bubblesArray.splice(index, 1);
+            count++;
             console.log("Popped");
+            console.log("Count : "+ count);
         }
+        scroreboard.innerHTML = count;
     });
 });
 
