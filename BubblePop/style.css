@@ -10,13 +10,29 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    text-align: center;
+}
+
+.main > h1{
+    color: white;
 }
 
 .score-div{
-    border: 1px solid white;
+    border: 1px solid #414141;
     text-align: center;
-    padding: 1rem;
+    padding: 15px;
+    border-radius: 12px;
     background-color: white;
+    font-size: large;
+    margin: 0 5px;
+    color: #414141;
+}
+
+.scoreboard{
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    font-family: math;
 }
 
 #playground{
