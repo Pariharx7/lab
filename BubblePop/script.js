@@ -10,6 +10,7 @@ let count = 0;
 // #user input
 
 let userInputNum;
+let randomColor = `hsl(${Math.random() * 360}, 70%, 50%)`;
 
 do{
     userInputNum = prompt("Please enter a number: ");
@@ -71,6 +72,7 @@ canvasBox.addEventListener('click', (e) => {
             console.log("Count : "+ count);
         }
         scroreboard.innerHTML = count;
+        scroreboard.style.color = `hsl(${Math.random() * 360}, 70%, 50%)`
     });
 });
 
