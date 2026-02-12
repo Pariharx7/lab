@@ -29,20 +29,26 @@ nav li a{
     margin: 10px 0;
 }
 
-main{
+.main-section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 20px;
     text-align: center;
 }
+
+.title-div{
+    padding: 8px;
+}
 .color-box-div{
-    padding: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .color-box{
     border: 1px solid red;
     height: 200px;
-    width: 80px;
+    width: 150px;
     margin: 10px;
+    border-radius: 7px;
 }
