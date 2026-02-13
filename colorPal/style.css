@@ -63,6 +63,11 @@ footer{
     padding: 13px;
 }
 
+.hambg-effect{
+    flex-direction: column;
+    text-align: center;
+    display: block;
+}
 
 
 
@@ -90,7 +95,11 @@ footer{
         scale: 3.1;
     }
 
+    
+
     nav{
         display: none;
+        text-align: center;
+        padding: 7px;
     }
 }
