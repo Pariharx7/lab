@@ -14,6 +14,10 @@ header{
     padding: 13px;
 }
 
+.heading{
+    display: none;
+}
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -65,6 +69,8 @@ footer{
 /* MEDIA QUERIES */
 
 @media  screen and (max-width: 768px) {
+
+
     .title-div{
         text-align: center;
     }
@@ -76,5 +82,15 @@ footer{
 
     .color-box{
         width: 200px;
+    }
+
+    .heading{
+        display: block;
+        font-size: large;
+        scale: 3.1;
+    }
+
+    nav{
+        display: none;
     }
 }
