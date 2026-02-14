@@ -21,3 +21,16 @@ for(page of pageLinks){
         header.classList.remove('hambg-effect');
     })
 }
+
+
+function generateHEXcolors(){
+
+}
+
+function generateRGBcolors(){
+
+}
+
+function generateHSLcolors(){
+    
+}
