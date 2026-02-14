@@ -93,13 +93,15 @@ footer{
         display: block;
         font-size: large;
         scale: 3.1;
-    }
-
-    
+    }    
 
     nav{
         display: none;
         text-align: center;
         padding: 7px;
+    }
+
+    nav li{
+        margin: 0.6rem 0;
     }
 }
