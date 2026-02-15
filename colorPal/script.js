@@ -29,13 +29,31 @@ function generateRGBcolors(){
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-console.log(generateHEXcolors());
-console.log(generateRGBcolors());
-console.log(generateHSLcolors());
-
 function generateHSLcolors(){
     const h = Math.floor(Math.random() * 361);
     const s = Math.floor(Math.random() * 101);
     const l = Math.floor(Math.random() * 101);
     return `hsl(${h}, ${s}%, ${l}%)`;
 }
+
+console.log(generateHEXcolors());
+console.log(generateRGBcolors());
+console.log(generateHSLcolors());
+
+// a higher out fn 
+function rollOutColors(cb, arr){
+    for(box of arr){
+        const color = cb();
+        box.style.backgroundColor = color;
+        box.style.borderColor = color;
+    }
+}
+
+window.addEventListener("load", ()=> {
+
+    rollOutColors(generateHSLcolors, hslBoxes);
+
+    rollOutColors(generateRGBcolors, rgbBoxes);
+    
+    rollOutColors(generateHEXcolors, hexBoxes);
+})
