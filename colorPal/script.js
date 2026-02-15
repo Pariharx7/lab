@@ -3,8 +3,11 @@ const nav = document.querySelector("nav");
 const hambg = document.querySelector(".heading");
 const hambgrIcon = document.querySelector("#hamburger-icon");
 const pageLinks = document.querySelectorAll(".page-links");
+const hexBoxes = document.querySelectorAll(".hex-boxes");
+const rgbBoxes = document.querySelectorAll(".rgb-boxes");
+const hslBoxes = document.querySelectorAll(".hsl-boxes");
 
-console.log(pageLinks);
+console.log(hslBoxes);
 
 hambgrIcon.addEventListener("click", () => {
         nav.classList.toggle("active");
