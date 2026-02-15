@@ -7,9 +7,8 @@ const pageLinks = document.querySelectorAll(".page-links");
 console.log(pageLinks);
 
 hambgrIcon.addEventListener("click", () => {
-        nav.style.display = "block"
-        hambg.style.display = "none"
-        header.classList.add('hambg-effect')
+        nav.classList.toggle("active");
+        header.classList.toggle('hambg-effect');
 
     console.log("Clickeddd")
 })
@@ -21,6 +20,8 @@ for(page of pageLinks){
         header.classList.remove('hambg-effect');
     })
 }
+
+// add transtions to smoothen moves
 
 
 function generateHEXcolors(){
