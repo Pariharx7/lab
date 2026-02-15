@@ -13,25 +13,26 @@ hambgrIcon.addEventListener("click", () => {
     console.log("Clickeddd")
 })
 
-for(page of pageLinks){
-    page.addEventListener("click", () => {
-        nav.style.display = "none";
-        hambg.style.display = "block";
-        header.classList.remove('hambg-effect');
-    })
-}
-
-// add transtions to smoothen moves
-
 
 function generateHEXcolors(){
-
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    return "#" + randomColor.padStart(6, '0').toUpperCase();
 }
 
 function generateRGBcolors(){
-
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
+console.log(generateHEXcolors());
+console.log(generateRGBcolors());
+console.log(generateHSLcolors());
+
 function generateHSLcolors(){
-    
+    const h = Math.floor(Math.random() * 361);
+    const s = Math.floor(Math.random() * 101);
+    const l = Math.floor(Math.random() * 101);
+    return `hsl(${h}, ${s}%, ${l}%)`;
 }
