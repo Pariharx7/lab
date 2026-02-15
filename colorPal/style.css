@@ -68,6 +68,16 @@ footer{
     text-align: center;
     display: block;
 }
+.active{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s ease-out;
+}
+
+.transition-smooth{
+    transition: all 0.3s ease-in-out;
+}
 
 
 
@@ -89,6 +99,17 @@ footer{
         width: 200px;
     }
 
+    header{
+        width: 100vw;
+        flex-direction: column;
+        transform: translateY(-10px);
+    }
+
+    .logo{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .heading{
         display: block;
         font-size: large;
@@ -99,6 +120,7 @@ footer{
         display: none;
         text-align: center;
         padding: 7px;
+        transform: translateY(-10px);
     }
 
     nav li{
