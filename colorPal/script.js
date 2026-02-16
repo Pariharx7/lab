@@ -6,14 +6,13 @@ const pageLinks = document.querySelectorAll(".page-links");
 const hexBoxes = document.querySelectorAll(".hex-boxes");
 const rgbBoxes = document.querySelectorAll(".rgb-boxes");
 const hslBoxes = document.querySelectorAll(".hsl-boxes");
+const shuffleColorsButton = document.getElementById("shuffleColors");
 
-console.log(hslBoxes);
 
 hambgrIcon.addEventListener("click", () => {
         nav.classList.toggle("active");
         header.classList.toggle('hambg-effect');
 
-    console.log("Clickeddd")
 })
 
 
@@ -36,24 +35,29 @@ function generateHSLcolors(){
     return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
-console.log(generateHEXcolors());
-console.log(generateRGBcolors());
-console.log(generateHSLcolors());
 
 // a higher out fn 
 function rollOutColors(cb, arr){
     for(box of arr){
         const color = cb();
+        box.style.transitionDuration = "2.7s";
         box.style.backgroundColor = color;
         box.style.borderColor = color;
     }
 }
 
-window.addEventListener("load", ()=> {
-
+function genNewColors(){
     rollOutColors(generateHSLcolors, hslBoxes);
 
     rollOutColors(generateRGBcolors, rgbBoxes);
     
     rollOutColors(generateHEXcolors, hexBoxes);
+}
+
+window.addEventListener("load", ()=> {
+    genNewColors();
+})
+
+shuffleColorsButton.addEventListener("click", () => {
+    genNewColors();
 })
