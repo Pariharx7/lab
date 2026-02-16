@@ -11,31 +11,31 @@ const allBoxes = document.querySelectorAll(".color-box-div");
 
 const containers = {
     hex: hexBoxes,
-    hsl: hslBoxes, 
+    hsl: hslBoxes,
     rgb: rgbBoxes
 };
 
 
 
 hambgrIcon.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        header.classList.toggle('hambg-effect');
+    nav.classList.toggle("active");
+    header.classList.toggle('hambg-effect');
 })
 
 
-function generateHEXcolors(){
+function generateHEXcolors() {
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
     return "#" + randomColor.padStart(6, '0').toUpperCase();
 }
 
-function generateRGBcolors(){
+function generateRGBcolors() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-function generateHSLcolors(){
+function generateHSLcolors() {
     const h = Math.floor(Math.random() * 361);
     const s = Math.floor(Math.random() * 101);
     const l = Math.floor(Math.random() * 101);
@@ -44,8 +44,8 @@ function generateHSLcolors(){
 
 
 // a higher out fn 
-function rollOutColors(cb, arr){
-    for(box of arr){
+function rollOutColors(cb, arr) {
+    for (box of arr) {
         const color = cb();
         box.style.transitionDuration = "2.7s";
         box.style.backgroundColor = color;
@@ -53,15 +53,15 @@ function rollOutColors(cb, arr){
     }
 }
 
-function genNewColors(){
+function genNewColors() {
     rollOutColors(generateHSLcolors, hslBoxes);
 
     rollOutColors(generateRGBcolors, rgbBoxes);
-    
+
     rollOutColors(generateHEXcolors, hexBoxes);
 }
 
-window.addEventListener("load", ()=> {
+window.addEventListener("load", () => {
     genNewColors();
 })
 
@@ -69,50 +69,47 @@ shuffleColorsButton.addEventListener("click", () => {
     genNewColors();
 })
 
-// allBoxes.forEach((box) => {
-//     box.addEventListener("click", (e) => {
-//     if(e.target.classList.contains('color-box')){
-//         console.log("Color of clicked box is ", e.target.style.backgroundColor)
-//     }
-// })
-// })
-
 Object.values(containers).forEach(boxes => {
     boxes.forEach((container) => {
         container.addEventListener('click', (e) => {
-        if(e.target.classList.contains('color-box')){
-            const rawColor = e.target.style.backgroundColor;
+            if (e.target.classList.contains('color-box')) {
+                const rawColor = e.target.style.backgroundColor;
 
-        if(container.classList.contains('hex-boxes')){
-            console.log(rgbToHex(rawColor));
-        } else if(container.classList.contains('hsl-boxes')){
-            console.log(rgbToHSL(rawColor));
-        } else if(container.classList.contains('rgb-boxes')){
-            console.log(rawColor);
-        }
-    }
-    })
+                if (container.classList.contains('hex-boxes')) {
+                    let currentColor = rgbToHex(rawColor);
+                    container.innerHTML = `<b>${currentColor}</b>`;
+
+                } else if (container.classList.contains('hsl-boxes')) {
+                    let currentColor = rgbToHSL(rawColor);
+                    container.innerHTML = `<b>${currentColor}</b>`;
+                } else if (container.classList.contains('rgb-boxes')) {
+                    let currentColor =  rawColor;
+                     container.innerHTML = `<b>${currentColor}</b>`; 
+
+                }
+            }
+        })
     })
 });
 
-function rgbToHex(rgb){
-    const [r,g,b] = rgb.match(/\d+/g).map(Number);
-    return "#" + [r,g,b].map(x => x.toString(16).padStart(2, '0')).join('');
+function rgbToHex(rgb) {
+    const [r, g, b] = rgb.match(/\d+/g).map(Number);
+    return "#" + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 }
 
-function rgbToHSL(rgb){
-    let [r,g,b] = rgb.match(/\d+/g).map(x => x / 255);
-    let max = Math.max(r,g,b), min = Math.min(r, g, b);
+function rgbToHSL(rgb) {
+    let [r, g, b] = rgb.match(/\d+/g).map(x => x / 255);
+    let max = Math.max(r, g, b), min = Math.min(r, g, b);
     let h, s, l = (max + min) / 2;
 
-    if( max == min){
+    if (max == min) {
         h = s = 0;
     } else {
         let d = max - min;
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max){
-            case r: h = (g-b) / d + (g < b ?6 : 0); break;
-            case g: h = (b-r) / d + 2; break;
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
             case b: h = (r - g) / d + 4; break;
         }
         h /= 6;
