@@ -7,12 +7,19 @@ const hexBoxes = document.querySelectorAll(".hex-boxes");
 const rgbBoxes = document.querySelectorAll(".rgb-boxes");
 const hslBoxes = document.querySelectorAll(".hsl-boxes");
 const shuffleColorsButton = document.getElementById("shuffleColors");
+const allBoxes = document.querySelectorAll(".color-box-div");
+
+const containers = {
+    hex: hexBoxes,
+    hsl: hslBoxes, 
+    rgb: rgbBoxes
+};
+
 
 
 hambgrIcon.addEventListener("click", () => {
         nav.classList.toggle("active");
         header.classList.toggle('hambg-effect');
-
 })
 
 
@@ -61,3 +68,54 @@ window.addEventListener("load", ()=> {
 shuffleColorsButton.addEventListener("click", () => {
     genNewColors();
 })
+
+// allBoxes.forEach((box) => {
+//     box.addEventListener("click", (e) => {
+//     if(e.target.classList.contains('color-box')){
+//         console.log("Color of clicked box is ", e.target.style.backgroundColor)
+//     }
+// })
+// })
+
+Object.values(containers).forEach(boxes => {
+    boxes.forEach((container) => {
+        container.addEventListener('click', (e) => {
+        if(e.target.classList.contains('color-box')){
+            const rawColor = e.target.style.backgroundColor;
+
+        if(container.classList.contains('hex-boxes')){
+            console.log(rgbToHex(rawColor));
+        } else if(container.classList.contains('hsl-boxes')){
+            console.log(rgbToHSL(rawColor));
+        } else if(container.classList.contains('rgb-boxes')){
+            console.log(rawColor);
+        }
+    }
+    })
+    })
+});
+
+function rgbToHex(rgb){
+    const [r,g,b] = rgb.match(/\d+/g).map(Number);
+    return "#" + [r,g,b].map(x => x.toString(16).padStart(2, '0')).join('');
+}
+
+function rgbToHSL(rgb){
+    let [r,g,b] = rgb.match(/\d+/g).map(x => x / 255);
+    let max = Math.max(r,g,b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if( max == min){
+        h = s = 0;
+    } else {
+        let d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch(max){
+            case r: h = (g-b) / d + (g < b ?6 : 0); break;
+            case g: h = (b-r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+    return `hsl(${Math.round(h * 360)}, $${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+}
