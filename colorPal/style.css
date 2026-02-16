@@ -43,18 +43,33 @@ nav li a{
 
 .title-div{
     padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+#shuffleColors{
+    padding: 9px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    width: 100px;
+    height: 34px;
+}
+
 .color-box-div{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .color-box{
-    border: 1px solid red;
     height: 200px;
     width: 150px;
     margin: 10px;
     border-radius: 7px;
+    transition: background-color 1s;
 }
 
 footer{
@@ -88,6 +103,7 @@ footer{
 
     .title-div{
         text-align: center;
+        flex-direction: column;
     }
 
     .color-box-div{
