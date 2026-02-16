@@ -116,6 +116,8 @@ footer{
     }
 
     header{
+        padding: 1rem;
+        margin-top: 10px;
         width: 100vw;
         flex-direction: column;
         transform: translateY(-10px);
@@ -141,5 +143,9 @@ footer{
 
     nav li{
         margin: 0.6rem 0;
+    }
+
+    #shuffleColors{
+        margin-top: 10px;
     }
 }
