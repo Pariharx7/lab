@@ -26,7 +26,21 @@ nav{
 
 nav li a{
     margin:0 1.5rem;
+    color: black;
 }
+
+nav li a:hover{
+    margin:0 1.5rem;
+    color: blue;
+    padding: 7px;
+    border-bottom: 1px solid blue;
+    border-right: 1px solid blue;
+    scale: 0.1;
+    transition: all 0.5s ease-out;
+    border-radius: 6px;
+}
+
+
 
 .intro-section{
     text-align: center;
