@@ -50,6 +50,7 @@ function rollOutColors(cb, arr) {
         box.style.transitionDuration = "2.7s";
         box.style.backgroundColor = color;
         box.style.borderColor = color;
+        box.innerHTML = "";
     }
 }
 
@@ -114,5 +115,5 @@ function rgbToHSL(rgb) {
         }
         h /= 6;
     }
-    return `hsl(${Math.round(h * 360)}, $${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+    return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
 }
