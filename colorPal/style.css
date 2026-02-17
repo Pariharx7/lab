@@ -5,6 +5,7 @@
     font-family: cursive sans-serif;
     text-decoration: none;
     list-style: none;
+    /* background-color: ghostwhite; */
 }
 
 header{
@@ -59,10 +60,18 @@ nav li a{
     height: 34px;
 }
 
+#shuffleColors:hover{
+    color: blue;
+    background-color: white;
+    border: 3px solid blue;
+    
+}
+
 .color-box-div{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .color-box{
     height: 200px;
@@ -70,6 +79,10 @@ nav li a{
     margin: 10px;
     border-radius: 7px;
     transition: background-color 1s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 13px;
 }
 
 footer{
