@@ -20,6 +20,7 @@ const containers = {
 hambgrIcon.addEventListener("click", () => {
     nav.classList.toggle("active");
     header.classList.toggle('hambg-effect');
+    hambgrIcon.classList.toggle('special-hm-effect');
 })
 
 
