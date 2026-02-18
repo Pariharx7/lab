@@ -17,6 +17,7 @@ header{
 
 .heading{
     display: none;
+    transition: transform 2.2s linear;
 }
 
 nav{
@@ -116,11 +117,13 @@ footer{
     transform: translateY(0);
     transition: all 0.7s ease-out;
 }
-
 .transition-smooth{
     transition: all 0.3s ease-in-out;
 }
-
+.special-hm-effect{
+    transition: transform 2.2s linear;
+    transform: rotate(90deg);
+}
 
 
 /* MEDIA QUERIES */
@@ -158,7 +161,7 @@ footer{
     .heading{
         display: block;
         font-size: large;
-        scale: 3.1;
+        scale: 1.1;
     }    
 
     nav{
