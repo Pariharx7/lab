@@ -17,16 +17,11 @@ async function getCarPhoto() {
     const randomPage = Math.floor(Math.random() * 10) + 1;
     const url = `https://pixabay.com/${API_KEY}/&q=${query}&image_type=photo&page={randomPage}`;
     const finalUrl = proxy + url;
-    const response = await fetch(`https://pixabay.com/api/?key=${54751795-c55b4d219897c093d0f1db0c0}/&q=cars`);
+    const response = await fetch(`https://pixabay.com/api/?key=54751795-c55b4d219897c093d0f1db0c0&q=cars&image_type=photo`);
     const data = await response.json();
-
-    if(data.hits && data.hits.length > 0){
-        const randomIndex = Math.floor(Math.random() * data.hits.length)
-        const car = data.hits[randomIndex];
-    } else{
-        console.log("No images found");
-        
-    }
+    
+    console.log(data.hits[0].pageURL);
+    
 }
 
 getCarPhoto();
