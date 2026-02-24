@@ -36,17 +36,19 @@ main{
 }
 
 .picture-box{
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 7px;
     height: 140px;
     width: 170px;
     margin: 2px 7px;
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 .picture-box > img{
-    width: 100%;
+    width: 90%;
     height: 100%;
+    border-radius: 4px;
 }
 
 
