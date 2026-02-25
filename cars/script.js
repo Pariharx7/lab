@@ -28,14 +28,15 @@ async function updateImages() {
 
 
 const statusx = navigator.onLine;
-console.log("status ", statusx);
 
-if(!statusx){
+if(statusx){
     window.addEventListener("load", updateImages);
 } else{
     pictureBoxes.forEach((box) => {
         box.innerHTML = "No Internet";
         box.style.display = "flex";
+        box.style.alignItems = "flex-end";
+        box.style.fontWeight = "bold";
     })
 }
 
