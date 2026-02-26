@@ -26,11 +26,13 @@ async function updateImages() {
     });
 }
 
+function modifyUpdateImagesFn(fn, timeout){
+    setTimeout(fn,timeout)
+}
 
 const statusx = navigator.onLine;
-
 if(statusx){
-    window.addEventListener("load", updateImages);
+    window.addEventListener("load", modifyUpdateImagesFn(updateImages, 7000));
 } else{
     pictureBoxes.forEach((box) => {
         box.innerHTML = "No Internet";
