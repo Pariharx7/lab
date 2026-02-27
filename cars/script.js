@@ -42,3 +42,10 @@ if(statusx){
     })
 }
 
+// SHort Method
+// navigator.onLine ?  window.addEventListener("load", modifyUpdateImagesFn(updateImages, 7000)) : pictureBoxes.forEach((box) => {
+//         box.innerHTML = "No Internet";
+//         box.style.display = "flex";
+//         box.style.alignItems = "flex-end";
+//         box.style.fontWeight = "bold";
+//     })
