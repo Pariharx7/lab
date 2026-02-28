@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h3>Base Convertor</h3>
+    </header>
+    <main>
+        <div class="content">
+            <label for="numberInput">Enter a number: </label>
+            <input type="text" id="numberInput" placeholder="Enter value" />
+
+            <label for="baseBox">Convert to?</label>
+            <select name="baseBox" id="baseBox">
+                <option value="binary">Binary</option>
+                <option value="octal">Octal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+            </select>
+
+            <button id="calculateButton">Calculate</button>
+        </div>
+        <div class="ouput-div">
+
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>
