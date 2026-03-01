@@ -1,8 +1,7 @@
 const numberInput = document.getElementById("numberInput");
 const selectedOpt = document.getElementById("baseBox").value;
 const calculateButton = document.getElementById("calculateButton");
-console.log(numberInput.value);
-
+const  outputDiv = document.querySelector(".output-div");
 
 calculateButton.addEventListener('click', () => {
     if(numberInput.value.trim() === ""){
@@ -14,8 +13,9 @@ calculateButton.addEventListener('click', () => {
         alert("Input should not be empty!")
     }
 
-    let x = baseConvertor(numberInputInt, selectedOpt);
-    console.log(x);
+    let convertedValue = baseConvertor(numberInputInt, selectedOpt);
+    outputDiv.classList.add("displayOutput")
+    outputDiv.innerHTML = `<b>The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}</b>`
     }
 })
 
@@ -31,5 +31,3 @@ function baseConvertor(input, option){
        return output = input.toString(16);
     }
 }
-
-console.log(baseConvertor(10, "binary"));
