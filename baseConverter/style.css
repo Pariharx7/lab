@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+header{
+    padding: 1rem;
+}
+main, .content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    margin: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 10px;
+}
+
+input, select{
+    margin: 1rem;
+    width: 250px;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    padding: 14px;
+}
+
+#calculateButton{
+    width: 100px;
+    height: 40px;
+    border-radius: 9px;
+    border: none;
+}
