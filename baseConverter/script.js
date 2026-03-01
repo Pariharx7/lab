@@ -5,12 +5,15 @@ console.log(numberInput.value);
 
 
 calculateButton.addEventListener('click', () => {
-    if(numberInput === ""){
+    if(numberInput.value.trim() === ""){
         alert("Input should not be empty!")
     } else{
     let numberInputInt = parseInt(numberInput.value);
 
-    
+    if(isNaN(numberInputInt)){
+        alert("Input should not be empty!")
+    }
+
     let x = baseConvertor(numberInputInt, selectedOpt);
     console.log(x);
     }
