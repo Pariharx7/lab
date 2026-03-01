@@ -14,8 +14,10 @@ calculateButton.addEventListener('click', () => {
     }
 
     let convertedValue = baseConvertor(numberInputInt, selectedOpt);
-    outputDiv.classList.add("displayOutput")
-    outputDiv.innerHTML = `<b>The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}</b>`
+    setTimeout(() => {
+        outputDiv.classList.add("displayOutput")
+        outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
+    }, 1500)
     }
 })
 
