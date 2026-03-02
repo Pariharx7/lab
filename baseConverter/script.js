@@ -1,19 +1,27 @@
 const numberInput = document.getElementById("numberInput");
-const selectedOpt = document.getElementById("baseBox").value;
+
 const calculateButton = document.getElementById("calculateButton");
 const  outputDiv = document.querySelector(".output-div");
 
 calculateButton.addEventListener('click', () => {
+    const selectedOpt = document.getElementById("baseBox").value;
     if(numberInput.value.trim() === ""){
-        alert("Input should not be empty!")
-    } else{
+        outputDiv.classList.add("displayOutput");
+        outputDiv.innerHTML = `<b>Please enter a number</b>`;
+    } else if(numberInput.value = " ") {
+        outputDiv.classList.add("displayOutput");
+        outputDiv.innerHTML = `<b>Please enter a number</b>`;
+    }
+    else{
     let numberInputInt = parseInt(numberInput.value);
 
     if(isNaN(numberInputInt)){
-        alert("Input should not be empty!")
+        outputDiv.classList.add("displayOutput");
+        outputDiv.innerHTML = `<b>Please enter a number</b>`;
     }
 
     let convertedValue = baseConvertor(numberInputInt, selectedOpt);
+    console.log(selectedOpt)
     setTimeout(() => {
         outputDiv.classList.add("displayOutput")
         outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
