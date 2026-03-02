@@ -10,7 +10,7 @@
 header{
     padding: 1rem;
 }
-main, .content{
+main, .content, .displayOutput{
     display: flex;
     flex-direction: column;
 }
@@ -23,6 +23,7 @@ main, .content{
     padding: 10px;
     border: 3px solid red;
     border-radius:8px;
+    margin-bottom: 0;
 }
 
 input, select{
@@ -60,4 +61,16 @@ input:not(:focus), select:not():focus{
 
 #calculateButton:hover{
     box-shadow: 0 0 8px #776e6e;
+}
+
+.displayOutput{
+    margin: 0 2.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 16vh;
+    padding: 10px;
+    border: 3px solid red;
+    border-radius:8px;
+    line-height: 3px;
+    border-top: none;
 }
