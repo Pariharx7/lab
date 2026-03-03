@@ -74,3 +74,9 @@ input:not(:focus), select:not():focus{
     line-height: 3px;
     border-top: none;
 }
+
+@media screen and (max-width: 768px) {
+    .displayOutput{
+        line-height: 25px;
+    }
+}
