@@ -14,7 +14,7 @@ calculateButton.addEventListener('click', () => {
     if(isNaN(numberInputInt)){
         outputDiv.classList.add("displayOutput");
         outputDiv.innerHTML = `<b>Please enter a number</b>`;
-    }
+    } else{
 
     let convertedValue = baseConvertor(numberInputInt, selectedOpt);
     console.log(selectedOpt)
@@ -23,6 +23,7 @@ calculateButton.addEventListener('click', () => {
         outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
     }, 1500)
     
+}
 })
 
 function baseConvertor(input, option){
