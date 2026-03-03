@@ -8,11 +8,7 @@ calculateButton.addEventListener('click', () => {
     if(numberInput.value.trim() === ""){
         outputDiv.classList.add("displayOutput");
         outputDiv.innerHTML = `<b>Please enter a number</b>`;
-    } else if(numberInput.value = " ") {
-        outputDiv.classList.add("displayOutput");
-        outputDiv.innerHTML = `<b>Please enter a number</b>`;
-    }
-    else{
+    } 
     let numberInputInt = parseInt(numberInput.value);
 
     if(isNaN(numberInputInt)){
@@ -26,7 +22,7 @@ calculateButton.addEventListener('click', () => {
         outputDiv.classList.add("displayOutput")
         outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
     }, 1500)
-    }
+    
 })
 
 function baseConvertor(input, option){
