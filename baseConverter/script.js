@@ -5,22 +5,32 @@ const  outputDiv = document.querySelector(".output-div");
 
 calculateButton.addEventListener('click', () => {
     const selectedOpt = document.getElementById("baseBox").value;
-    if(numberInput.value.trim() === ""){
-        outputDiv.classList.add("displayOutput");
-        outputDiv.innerHTML = `<b>Please enter a number</b>`;
-    } 
-    let numberInputInt = parseInt(numberInput.value);
 
-    if(isNaN(numberInputInt)){
+    if(!(numberInput.value.trim())){
+        outputDiv.classList.add("displayOutput");
+        outputDiv.innerHTML = `<b>Input is empty</b>`;
+    } 
+
+    let numberInputVal = parseInt(numberInput.value);
+    console.log("Before fn ", numberInputVal);
+
+    if(validateHexInputs(numberInput)){
+        console.log("I got execures");
+        numberInputVal = numberInput.value;
+        console.log("Inside the fn ",numberInputVal);
+    }
+
+
+    if(isNaN(numberInputVal)){
         outputDiv.classList.add("displayOutput");
         outputDiv.innerHTML = `<b>Please enter a number</b>`;
     } else{
 
-    let convertedValue = baseConvertor(numberInputInt, selectedOpt);
+    let convertedValue = baseConvertor(numberInputVal, selectedOpt);
     
     setTimeout(() => {
         outputDiv.classList.add("displayOutput")
-        outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
+        outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputVal} is ${convertedValue}`
     }, 1500)
     
 }
@@ -40,4 +50,14 @@ function baseConvertor(input, option){
     if(option === "decimal") {
        return output = parseInt(input, 2);
     }
+}
+
+function validateHexInputs(input) {
+    const hexRegex = /^[0-9A-Fa-f]+$/;
+
+    if(!hexRegex.test(input)) {
+        return "Invalid hexadecimal"
+    }
+
+    return true;
 }
