@@ -17,7 +17,7 @@ calculateButton.addEventListener('click', () => {
     } else{
 
     let convertedValue = baseConvertor(numberInputInt, selectedOpt);
-    console.log(selectedOpt)
+    
     setTimeout(() => {
         outputDiv.classList.add("displayOutput")
         outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputInt} is ${convertedValue}`
@@ -35,6 +35,9 @@ function baseConvertor(input, option){
        return output = input.toString(8);
     }
     if(option === "hexadecimal") {
-       return output = input.toString(16);
+       return output = input.toString(16).toUpperCase();
+    }
+    if(option === "decimal") {
+       return output = parseInt(input, 2);
     }
 }
