@@ -9,22 +9,23 @@ calculateButton.addEventListener('click', () => {
     if(!(numberInput.value.trim())){
         outputDiv.classList.add("displayOutput");
         outputDiv.innerHTML = `<b>Input is empty</b>`;
+        return;
     } 
-
-    let numberInputVal = parseInt(numberInput.value);
-    console.log("Before fn ", numberInputVal);
-
+    let numberInputVal = "";
     if(validateHexInputs(numberInput)){
-        console.log("I got execures");
+        console.log("I got executed");
         numberInputVal = numberInput.value;
         console.log("Inside the fn ",numberInputVal);
     }
-
+    else{
+        numberInputVal = parseInt(numberInput.value);
+        console.log("Before fn else", numberInputVal);
+    }
 
     if(isNaN(numberInputVal)){
         outputDiv.classList.add("displayOutput");
         outputDiv.innerHTML = `<b>Please enter a number</b>`;
-    } else{
+    }
 
     let convertedValue = baseConvertor(numberInputVal, selectedOpt);
     
@@ -33,7 +34,7 @@ calculateButton.addEventListener('click', () => {
         outputDiv.innerHTML = `The ${selectedOpt} value of ${numberInputVal} is ${convertedValue}`
     }, 1500)
     
-}
+
 })
 
 function baseConvertor(input, option){
@@ -52,12 +53,8 @@ function baseConvertor(input, option){
     }
 }
 
-function validateHexInputs(input) {
+function validateHexInputs(inputElement) {
     const hexRegex = /^[0-9A-Fa-f]+$/;
 
-    if(!hexRegex.test(input)) {
-        return "Invalid hexadecimal"
-    }
-
-    return true;
+    return hexRegex,test(inputElement.value);
 }
