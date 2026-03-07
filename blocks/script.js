@@ -3,9 +3,7 @@ const blockBox = document.getElementById("block");
 
 let posX = blockBox.offsetLeft;
 let posY = blockBox.offsetTop;
-const pixelsToMove = 100;
-
-
+const pixelsToMove = 20;
 
 
 body.addEventListener("keydown", (e) => {   
@@ -14,9 +12,6 @@ body.addEventListener("keydown", (e) => {
     const boxHeight = blockBox.offsetHeight;
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-
-    console.log(posY);
-    console.log(posX);
 
     switch (e.key){
         case "ArrowUp":
@@ -62,9 +57,11 @@ body.addEventListener("keydown", (e) => {
                 posX = screenWidth - boxWidth;
                 break;
             }
+        case "E":
+        case "e":
+            blockBox.style.backgroundColor = rgbGenerator(randomColorGenerator);
+            blockBox.style.borderColor = rgbGenerator(randomColorGenerator);
         default: 
-            console.log('huhu');
-            
             return;
     }
 
@@ -74,3 +71,13 @@ body.addEventListener("keydown", (e) => {
 })
 
 //upon E change color of box
+
+let randomColorGenerator = function(){
+    let randomNumberRGB = Math.floor((Math.random() * 255) + 1);
+    return randomNumberRGB; 
+}
+
+function rgbGenerator(fn){
+    let color = `rgb(${fn()},${fn()},${fn()})`;
+    return color;
+}
