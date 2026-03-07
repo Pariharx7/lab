@@ -1,31 +1,37 @@
 const body = document.querySelector("body");
 const blockBox = document.getElementById("block");
 
-let posX = 0;
-let posY = 0;
-const pixelsToMove = 10;
+let posX = blockBox.offsetLeft;
+let posY = blockBox.offsetTop;
+const pixelsToMove = 100;
 
 body.addEventListener("keydown", (e) => {   
+
+    const boxWidth = blockBox.offsetWidth;
+    const boxHeight = blockBox.offsetHeight;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
     switch (e.key){
         case "ArrowUp":
         case "W":
         case "w":
-            posY -= pixelsToMove;
+            if(posX > 0) posY -= pixelsToMove;
             break;
         case "ArrowDown":
         case "S":
         case "s":
-            posY += pixelsToMove;
+            if(posX + boxHeight < screenHeight) posY += pixelsToMove;
             break;
         case "ArrowLeft":
         case "A":
         case "a":
-            posX -= pixelsToMove;
+            if(posY > 0) posX -= pixelsToMove;
             break;
         case "ArrowRight":
         case "D":
         case "d":
-            posX += pixelsToMove; 
+            if(posY + boxWidth < screenWidth) posX += pixelsToMove; 
             break;
         default: 
             return;
