@@ -5,6 +5,9 @@ let posX = blockBox.offsetLeft;
 let posY = blockBox.offsetTop;
 const pixelsToMove = 100;
 
+
+
+
 body.addEventListener("keydown", (e) => {   
 
     const boxWidth = blockBox.offsetWidth;
@@ -12,28 +15,56 @@ body.addEventListener("keydown", (e) => {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
+    console.log(posY);
+    console.log(posX);
+
     switch (e.key){
         case "ArrowUp":
         case "W":
         case "w":
-            if(posX > 0) posY -= pixelsToMove;
-            break;
+            if(posY - pixelsToMove > 0){
+                posY -= pixelsToMove;
+                break;
+            } else{
+                posY = 0;
+                break;
+            }
+            
         case "ArrowDown":
         case "S":
         case "s":
-            if(posX + boxHeight < screenHeight) posY += pixelsToMove;
-            break;
+            if(posY + boxHeight + pixelsToMove <= screenHeight){
+                posY += pixelsToMove;
+                break;
+            } else{
+                posY = screenHeight + pixelsToMove;
+                break;
+            }
+
         case "ArrowLeft":
         case "A":
         case "a":
-            if(posY > 0) posX -= pixelsToMove;
-            break;
+            if(posX - pixelsToMove > 0) {
+                posX -= pixelsToMove;
+                break;
+            }else{
+                posX = 0;
+                break;
+            }
+            
         case "ArrowRight":
         case "D":
         case "d":
-            if(posY + boxWidth < screenWidth) posX += pixelsToMove; 
-            break;
+            if(posX + boxWidth + pixelsToMove <= screenWidth){
+                posX += pixelsToMove; 
+                break;
+            } else {
+                posX = screenWidth - boxWidth;
+                break;
+            }
         default: 
+            console.log('huhu');
+            
             return;
     }
 
