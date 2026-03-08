@@ -59,8 +59,10 @@ body.addEventListener("keydown", (e) => {
             }
         case "E":
         case "e":
-            blockBox.style.backgroundColor = rgbGenerator(randomColorGenerator);
-            blockBox.style.borderColor = rgbGenerator(randomColorGenerator);
+            setTimeout(() => {
+                blockBox.style.backgroundColor = rgbGenerator(randomColorGenerator);
+                blockBox.style.borderColor = rgbGenerator(randomColorGenerator);
+            }, 1000)
         default: 
             return;
     }
