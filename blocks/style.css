@@ -10,6 +10,7 @@
     font-size: 1em;
     box-shadow:3px 3px 5px #414141;
     margin-bottom: 4px;
+    color: white;
     background-color: #474444;
 }
 kbd{
@@ -20,6 +21,7 @@ kbd{
     width: 50px;
     height: 20px;
     margin:0 12px;
+    color: black;
 }
 
 #block{
@@ -28,4 +30,30 @@ kbd{
     border: 1px solid yellow;
     background-color: yellow;
     border-radius: 10px;
+}
+
+
+/* media queires */
+
+@media screen and (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading{
+        padding: 1rem;
+        font-size: 0.5em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 15px;
+    }
+
+    kbd{
+    width: 30px;
+    height: 25px;
+}
 }
