@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 canvas{
-    height: 600px;
-    width: 1400px;
-    border: 2px solid black;
+    height: 770px;
+    width: 1530px;
+    border: 5px solid black;
 }
 
 #bird{
