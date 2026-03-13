@@ -3,16 +3,19 @@ let ctx = canvas.getContext("2d");
 let img = new Image();
 img.src = "./assets/images/bxrd.png";
 
-let birdY = 200;
-let birdX = 10;
+let birdY = 250;
+let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
 let gravity = 0.8;
-let jump = -7;
+let jump = -10;
+let angle = 0;
+let isGameStarted = false;
 
 
 
 function update(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     velocity += gravity;
 
     birdY += velocity;
@@ -25,7 +28,6 @@ function update(){
         birdY = 0;
         velocity = 0;
     }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
