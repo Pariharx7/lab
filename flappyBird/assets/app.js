@@ -13,7 +13,8 @@ let autoMode = true;
 
 let pipes = [];
 let framesCount = 0;
-let pipeGap = 120;
+let pipeGap = 40;
+let offScreenPoint = -50;
 
 
 function update(){
@@ -37,14 +38,12 @@ function update(){
         velocity = 0;
     }
 
-    if(framesCount % 120 == 0){
-        let minPipeHeight = 50;
-        let maxPipeHeight = canvas.height - pipeGap - minPipeHeight;
-        let randomHeight = Math.floor(Math.random() * (maxPipeHeight - minPipeHeight + 1)) + minPipeHeight;
-
+    if(framesCount % 70 == 0){
+        let randomTop = Math.random() * (canvas.height / 2) + 50; 
+        console.log(randomTop)
         pipes.push({
             x: canvas.width,
-            top: randomHeight
+            top: randomTop
         });
     }
 
@@ -53,19 +52,19 @@ function update(){
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
     ctx.drawImage(img,birdX, birdY, 50, 50);
 
-    for(let i = 0; i < pipes.length; i++){
+// tower loop
+    for(let i = pipes.length - 1; i >= 0; i--){
         pipes[i].x -= 2;
 
         ctx.fillStyle = "green";
 
-        ctx.fillRect(pipes[i].x, 0, 50, pipes[i].top);
+        ctx.fillRect(pipes[i].x, 0, 30, pipes[i].top);
 
         let bottomPipeY = pipes[i].top + pipeGap;
-        ctx.fillRect(pipes[i].x, bottomPipeY, 50, canvas.height - bottomPipeY);
+        ctx.fillRect(pipes[i].x, bottomPipeY, 30, canvas.height - bottomPipeY);
 
-        if(pipes[i].x < -50){
+        if(pipes[i].x < offScreenPoint){
             pipes.splice(i, -1);
-            i--;
         }
     }
 
