@@ -39,8 +39,7 @@ function update(){
     }
 
     if(framesCount % 70 == 0){
-        let randomTop = Math.random() * (canvas.height / 2) + 50; 
-        console.log(randomTop)
+        let randomTop = Math.floor(Math.random() * (canvas.height / 2) + 50); 
         pipes.push({
             x: canvas.width,
             top: randomTop
