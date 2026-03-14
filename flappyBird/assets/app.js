@@ -9,9 +9,11 @@ let birdSize = 30;
 let velocity = 0;
 let gravity = 0.8;
 let jump = -10;
-let angle = 0;
-let isGameStarted = false;
+let autoMode = true;
 
+let pipes = [];
+let framesCount = 0;
+let pipeGap = 120;
 
 
 function update(){
@@ -19,6 +21,10 @@ function update(){
     velocity += gravity;
 
     birdY += velocity;
+
+    if(autoMode && birdY > 250){
+        velocity = jump;
+    }
 
     if(birdY + birdSize > canvas.height){
         birdY = canvas.height - birdSize;
