@@ -22,6 +22,8 @@ function update(){
 
     birdY += velocity;
 
+    framesCount++;
+
     if(autoMode && birdY > 250){
         velocity = jump;
     }
@@ -35,9 +37,37 @@ function update(){
         velocity = 0;
     }
 
+    if(framesCount % 120 == 0){
+        let minPipeHeight = 50;
+        let maxPipeHeight = canvas.height - pipeGap - minPipeHeight;
+        let randomHeight = Math.floor(Math.random() * (maxPipeHeight - minPipeHeight + 1)) + minPipeHeight;
+
+        pipes.push({
+            x: canvas.width,
+            top: randomHeight
+        });
+    }
+
+
     ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
     ctx.drawImage(img,birdX, birdY, 50, 50);
+
+    for(let i = 0; i < pipes.length; i++){
+        pipes[i].x -= 2;
+
+        ctx.fillStyle = "green";
+
+        ctx.fillRect(pipes[i].x, 0, 50, pipes[i].top);
+
+        let bottomPipeY = pipes[i].top + pipeGap;
+        ctx.fillRect(pipes[i].x, bottomPipeY, 50, canvas.height - bottomPipeY);
+
+        if(pipes[i].x < -50){
+            pipes.splice(i, -1);
+            i--;
+        }
+    }
 
     requestAnimationFrame(update);
 }
