@@ -17,7 +17,7 @@ let autoMode = true;
 
 let pipes = [];
 let framesCount = 0;
-let pipeGap = 40;
+let pipeGap = 45;
 let offScreenPoint = -50;
 
 
@@ -43,7 +43,7 @@ function update(){
     }
 
     if(framesCount % 70 == 0){
-        let randomTop = Math.floor(Math.random() * (canvas.height / 2) + 50); 
+        let randomTop = Math.floor(Math.random() * (canvas.height/2) + 30); 
         pipes.push({
             x: canvas.width,
             top: randomTop
@@ -70,6 +70,24 @@ function update(){
 
         if(pipes[i].x < offScreenPoint){
             pipes.splice(i, -1);
+        }
+    }
+
+    //detection logic
+
+    for(let i = 0; i < pipes.length; i++){
+        let pipeX = pipes[i].x;
+        let pipeWidth = 30;
+        let topPipeBottomY = pipes[i].top;
+        let bottomPipeTopY = pipes[i].top + pipeGap;
+
+        if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY < topPipeBottomY){
+            alert("Crash hogyi birdie Upar 9 wale tower se");
+            autoMode = false;
+        }
+        if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY + 50 > bottomPipeTopY){
+            alert("Crash hogyi birdie Niche 11 wale tower se");
+            autoMode = false;
         }
     }
 
