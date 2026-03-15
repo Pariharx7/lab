@@ -1,14 +1,18 @@
 const canvas = document.querySelector("#gameCanvas");
 let ctx = canvas.getContext("2d");
-let img = new Image();
-img.src = "./assets/images/bxrd.png";
+let birdImg = new Image();
+birdImg.src = "./assets/images/bxrd.png";
+let upperTowerImg = new Image();
+upperTowerImg.src = "./assets/images/towerDown.png";
+let lowerTowerImg = new Image();
+lowerTowerImg.src = "./assets/images/towerUp.png";
 
 let birdY = 250;
 let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
 let gravity = 0.8;
-let jump = -10;
+let jump = -7;
 let autoMode = true;
 
 let pipes = [];
@@ -49,7 +53,7 @@ function update(){
 
     ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
-    ctx.drawImage(img,birdX, birdY, 50, 50);
+    ctx.drawImage(birdImg, birdX, birdY, 50, 50);
 
 // tower loop
     for(let i = pipes.length - 1; i >= 0; i--){
@@ -57,10 +61,12 @@ function update(){
 
         ctx.fillStyle = "green";
 
-        ctx.fillRect(pipes[i].x, 0, 30, pipes[i].top);
+        // ctx.fillRect(pipes[i].x, 0, 30, pipes[i].top);
+        ctx.drawImage(upperTowerImg, pipes[i].x, 0, 30, pipes[i].top);
 
         let bottomPipeY = pipes[i].top + pipeGap;
-        ctx.fillRect(pipes[i].x, bottomPipeY, 30, canvas.height - bottomPipeY);
+        // ctx.fillRect(pipes[i].x, bottomPipeY, 30, canvas.height - bottomPipeY);
+        ctx.drawImage(lowerTowerImg, pipes[i].x, bottomPipeY, 30, canvas.height - bottomPipeY);
 
         if(pipes[i].x < offScreenPoint){
             pipes.splice(i, -1);
