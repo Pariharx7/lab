@@ -1,5 +1,8 @@
 const canvas = document.querySelector("#gameCanvas");
 let ctx = canvas.getContext("2d");
+const bgImg = new Image();
+bgImg.src = "assets/images/background.png"
+console.log(bgImg)
 let birdImg = new Image();
 birdImg.src = "./assets/images/bxrd.png";
 let upperTowerImg = new Image();
@@ -23,6 +26,7 @@ let offScreenPoint = -50;
 
 function update(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
     velocity += gravity;
 
     birdY += velocity;
@@ -82,12 +86,14 @@ function update(){
         let bottomPipeTopY = pipes[i].top + pipeGap;
 
         if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY < topPipeBottomY){
-            alert("Crash hogyi birdie Upar 9 wale tower se");
-            autoMode = false;
+            // alert("Crash hogyi birdie Upar 9 wale tower se");
+            // autoMode = false;
+            console.log('9')
         }
         if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY + 50 > bottomPipeTopY){
-            alert("Crash hogyi birdie Niche 11 wale tower se");
-            autoMode = false;
+            // alert("Crash hogyi birdie Niche 11 wale tower se");
+            // autoMode = false;
+            console.log('11');
         }
     }
 
