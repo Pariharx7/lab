@@ -1,8 +1,7 @@
 const canvas = document.querySelector("#gameCanvas");
 let ctx = canvas.getContext("2d");
 const bgImg = new Image();
-bgImg.src = "assets/images/background.png"
-console.log(bgImg)
+bgImg.src = "assets/images/background.png";
 let birdImg = new Image();
 birdImg.src = "./assets/images/birdxie.png";
 let upperTowerImg = new Image();
@@ -22,6 +21,7 @@ let pipes = [];
 let framesCount = 0;
 let pipeGap = 45;
 let offScreenPoint = -50;
+let pipeWidth = 50;
 
 
 function update(){
@@ -61,6 +61,7 @@ function update(){
 
 // tower loop
     for(let i = pipes.length - 1; i >= 0; i--){
+        
         pipes[i].x -= 2;
 
         ctx.fillStyle = "green";
@@ -80,20 +81,29 @@ function update(){
     //detection logic
 
     for(let i = 0; i < pipes.length; i++){
-        let pipeX = pipes[i].x;
+        let pipe = pipes[i];
         let pipeWidth = 30;
-        let topPipeBottomY = pipes[i].top;
-        let bottomPipeTopY = pipes[i].top + pipeGap;
 
-        if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY < topPipeBottomY){
-            // alert("Crash hogyi birdie Upar 9 wale tower se");
-            // autoMode = false;
-            console.log('9')
+        let birdRight = birdX + 25;
+        let birdLeft = birdX + 10;
+        let birdTop = birdY + 10;
+        let birdBottom = birdY + 25;
+
+        let pipeRight = pipe.x + pipeWidth;
+        let pipeLeft = pipe.x;
+        let topPipeBottom = pipe.top;
+        let bottomPipeTop = pipe.top + pipeGap;
+
+        if(birdRight > pipeLeft && birdLeft < pipeRight){
+            if(birdTop < topPipeBottom){
+                gameOver();
+            }
+            if(birdBottom > bottomPipeTop){
+                gameOver();
+            }
         }
-        if(birdX < pipeX + pipeWidth && birdX + 50 > pipeX && birdY + 50 > bottomPipeTopY){
-            // alert("Crash hogyi birdie Niche 11 wale tower se");
-            // autoMode = false;
-            console.log('11');
+        if(birdBottom > canvas.height) {
+            gameOver();
         }
     }
 
@@ -109,3 +119,9 @@ window.addEventListener("keydown", (e) => {
 window.addEventListener("click", () => {
         velocity = jump;
 })
+
+function gameOver(){
+    // alert("Game over! Score : 0");
+    // location.reload();
+    console.log("Game over")
+}
