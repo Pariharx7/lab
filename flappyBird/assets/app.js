@@ -4,7 +4,7 @@ const bgImg = new Image();
 bgImg.src = "assets/images/background.png"
 console.log(bgImg)
 let birdImg = new Image();
-birdImg.src = "./assets/images/bxrd.png";
+birdImg.src = "./assets/images/birdxie.png";
 let upperTowerImg = new Image();
 upperTowerImg.src = "./assets/images/towerDown.png";
 let lowerTowerImg = new Image();
@@ -15,7 +15,7 @@ let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
 let gravity = 0.8;
-let jump = -7;
+let jump = -6;
 let autoMode = true;
 
 let pipes = [];
@@ -47,7 +47,7 @@ function update(){
     }
 
     if(framesCount % 70 == 0){
-        let randomTop = Math.floor(Math.random() * (canvas.height/2) + 30); 
+        let randomTop = Math.floor(Math.random() * (canvas.height/2) + 20); 
         pipes.push({
             x: canvas.width,
             top: randomTop
@@ -57,7 +57,7 @@ function update(){
 
     ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
-    ctx.drawImage(birdImg, birdX, birdY, 50, 50);
+    ctx.drawImage(birdImg, birdX, birdY, 30, 30);
 
 // tower loop
     for(let i = pipes.length - 1; i >= 0; i--){
@@ -105,4 +105,7 @@ window.addEventListener("keydown", (e) => {
     if(e.code === "Space"){
         velocity = jump;
     }
+})
+window.addEventListener("click", () => {
+        velocity = jump;
 })
