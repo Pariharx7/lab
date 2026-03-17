@@ -13,9 +13,8 @@ let birdY = 50;
 let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
-let gravity = 0.15;
-let jump = -4;
-let autoMode = true;
+let gravity = 0.12;
+let jump = -1.5;
 
 let pipes = [];
 let framesCount = 0;
@@ -28,14 +27,14 @@ function update(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
     velocity += gravity;
-
+    
+    if(velocity > 3){
+        velocity = 3;
+    }
     birdY += velocity;
 
     framesCount++;
 
-    // if(autoMode && birdY > 250){
-    //     velocity = jump;
-    // }
 
     if(birdY + birdSize > canvas.height){
         birdY = canvas.height - birdSize;
@@ -121,6 +120,9 @@ window.addEventListener("click", () => {
 })
 
 function gameOver(){
+    birdY = 50;
+    velocity = 0;
+    pipes = [];
     // alert("Game over! Score : 0");
     // location.reload();
     console.log("Game over")
