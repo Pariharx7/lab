@@ -9,12 +9,12 @@ upperTowerImg.src = "./assets/images/towerDown.png";
 let lowerTowerImg = new Image();
 lowerTowerImg.src = "./assets/images/towerUp.png";
 
-let birdY;
+let birdY = 50;
 let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
-let gravity = 0.8;
-let jump = -6;
+let gravity = 0.15;
+let jump = -4;
 let autoMode = true;
 
 let pipes = [];
