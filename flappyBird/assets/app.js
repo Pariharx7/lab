@@ -9,7 +9,7 @@ upperTowerImg.src = "./assets/images/towerDown.png";
 let lowerTowerImg = new Image();
 lowerTowerImg.src = "./assets/images/towerUp.png";
 
-let birdY = 250;
+let birdY;
 let birdX = 2;
 let birdSize = 30;
 let velocity = 0;
@@ -33,9 +33,9 @@ function update(){
 
     framesCount++;
 
-    if(autoMode && birdY > 250){
-        velocity = jump;
-    }
+    // if(autoMode && birdY > 250){
+    //     velocity = jump;
+    // }
 
     if(birdY + birdSize > canvas.height){
         birdY = canvas.height - birdSize;
