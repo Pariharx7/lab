@@ -2,12 +2,17 @@ const canvas = document.querySelector("#gameCanvas");
 let ctx = canvas.getContext("2d");
 const bgImg = new Image();
 bgImg.src = "assets/images/background.png";
+const bgImg2 = new Image();
+bgImg.src = "assets/images/backgroundFL.png";
 let birdImg = new Image();
 birdImg.src = "./assets/images/birdxie.png";
 let upperTowerImg = new Image();
 upperTowerImg.src = "./assets/images/towerDown.png";
 let lowerTowerImg = new Image();
 lowerTowerImg.src = "./assets/images/towerUp.png";
+
+let bgX = 0;
+let bgSpeed = 10;
 
 let birdY = 50;
 let birdX = 2;
@@ -22,10 +27,23 @@ let pipeGap = 45;
 let offScreenPoint = -50;
 let pipeWidth = 50;
 
+let score = 0;
+
+function drawMovingBGImg() {
+    ctx.drawImage(bgImg, 0, 0, canvas.width + 1, canvas.height);
+
+    ctx.drawImage(bgImg2, bgX + canvas.width, 0, canvas.width + 1, canvas.height);
+
+    bgX -= bgSpeed;
+
+    if(bgX <= -canvas.width){
+        bgX = 0;
+    }
+}
 
 function update(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+    drawMovingBGImg();
     velocity += gravity;
     
     if(velocity > 3){
