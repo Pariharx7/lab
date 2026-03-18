@@ -1,5 +1,9 @@
 const canvas = document.querySelector("#gameCanvas");
 let ctx = canvas.getContext("2d");
+const scoreDiv = document.querySelector(".Scorediv");
+const scoreSpan = document.getElementById("scoreSpan");
+
+
 const bgImg = new Image();
 bgImg.src = "assets/images/background.png";
 const bgImg2 = new Image();
@@ -42,8 +46,13 @@ function drawMovingBGImg() {
 }
 
 function update(){
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawMovingBGImg();
+    
+    scoreDiv.innerHTML = `Score : ${score}`;
+    console.log(scoreSpan.innerText)
+    
     velocity += gravity;
     
     if(velocity > 3){
@@ -67,7 +76,8 @@ function update(){
         let randomTop = Math.floor(Math.random() * (canvas.height/2) + 20); 
         pipes.push({
             x: canvas.width,
-            top: randomTop
+            top: randomTop,
+            passed: false
         });
     }
 
@@ -81,7 +91,9 @@ function update(){
         
         pipes[i].x -= 2;
 
-        ctx.fillStyle = "green";
+        
+
+        // ctx.fillStyle = "green";
 
         // ctx.fillRect(pipes[i].x, 0, 30, pipes[i].top);
         ctx.drawImage(upperTowerImg, pipes[i].x, 0, 30, pipes[i].top);
@@ -94,12 +106,20 @@ function update(){
             pipes.splice(i, -1);
         }
     }
-
+    
     //detection logic
 
     for(let i = 0; i < pipes.length; i++){
         let pipe = pipes[i];
         let pipeWidth = 30;
+
+        if(!pipe.passed && birdX > pipe.x + pipeWidth){
+            score++;
+            pipe.passed = true;
+
+            scoreSpan.innerText = score;
+        } 
+        
 
         let birdRight = birdX + 25;
         let birdLeft = birdX + 10;
@@ -123,7 +143,7 @@ function update(){
             gameOver();
         }
     }
-
+    
     requestAnimationFrame(update);
 }
 update();
@@ -141,6 +161,8 @@ function gameOver(){
     birdY = 50;
     velocity = 0;
     pipes = [];
+    score = 0;
+    scoreSpan.innerText = score;
     // alert("Game over! Score : 0");
     // location.reload();
     console.log("Game over")
