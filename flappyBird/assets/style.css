@@ -3,10 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.Scorediv{
+    padding: 10px;
+    text-align: center;
+}
 canvas{
-    height: 770px;
+    height: 740px;
     width: 1530px;
     border: 5px solid black;
+    /* margin-top: 35px; */
+    margin-left: 2px;
 }
 
 #bird{
