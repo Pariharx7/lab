@@ -63,7 +63,7 @@ function update(){
         velocity = 0;
     }
 
-    if(framesCount % 70 == 0){
+    if(framesCount % 50 == 0){
         let randomTop = Math.floor(Math.random() * (canvas.height/2) + 20); 
         pipes.push({
             x: canvas.width,
@@ -72,7 +72,7 @@ function update(){
     }
 
 
-    ctx.fillStyle = "#FF5733";
+    // ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
     ctx.drawImage(birdImg, birdX, birdY, 30, 30);
 
