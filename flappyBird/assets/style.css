@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 .Scorediv{
     padding: 10px;
     text-align: center;
+    color: white;
 }
 canvas{
     height: 740px;

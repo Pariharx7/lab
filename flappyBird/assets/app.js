@@ -16,7 +16,7 @@ let lowerTowerImg = new Image();
 lowerTowerImg.src = "./assets/images/towerUp.png";
 
 let bgX = 0;
-let bgSpeed = 10;
+let bgSpeed = 7;
 
 let birdY = 50;
 let birdX = 2;
@@ -30,7 +30,7 @@ let framesCount = 0;
 let pipeGap = 45;
 let offScreenPoint = -50;
 let pipeWidth = 50;
-
+let initalPush = 5;
 let score = 0;
 
 function drawMovingBGImg() {
@@ -49,9 +49,8 @@ function update(){
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawMovingBGImg();
-    
     scoreDiv.innerHTML = `Score : ${score}`;
-    console.log(scoreSpan.innerText)
+    // console.log(scoreSpan.innerText)
     
     velocity += gravity;
     
@@ -84,7 +83,7 @@ function update(){
 
     // ctx.fillStyle = "#FF5733";
     // ctx.fillRect(birdX, birdY, birdSize, birdSize);
-    ctx.drawImage(birdImg, birdX, birdY, 30, 30);
+    ctx.drawImage(birdImg, birdX + initalPush, birdY, 30, 30);
 
 // tower loop
     for(let i = pipes.length - 1; i >= 0; i--){
@@ -165,5 +164,5 @@ function gameOver(){
     scoreSpan.innerText = score;
     // alert("Game over! Score : 0");
     // location.reload();
-    console.log("Game over")
+    // console.log("Game over")
 }
