@@ -22,3 +22,27 @@ canvas{
     top: 20px;
     width: 150px;
 }
+
+@media (max-width: 768px){
+    .Scorediv{
+        position: fixed;
+        top: 0%;
+        left: 88%;
+        transform: translate(-50%, 0%) rotate(90deg);
+        /* background-color: white; */
+        z-index: 1;
+        font-size: large;
+    }
+    canvas{
+        margin-top: 19px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 90vh;
+        height: 100vw;
+
+        object-fit: contain;
+    }
+    
+}
