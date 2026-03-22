@@ -113,7 +113,9 @@ function update(){
         let pipeWidth = 30;
 
         if(!pipe.passed && birdX > pipe.x + pipeWidth){
+            
             score++;
+
             pipe.passed = true;
 
             scoreSpan.innerText = score;
@@ -155,6 +157,10 @@ window.addEventListener("keydown", (e) => {
 window.addEventListener("click", () => {
         velocity = jump;
 })
+window.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        velocity = jump;
+}, {passive: false})
 
 function gameOver(){
     birdY = 50;
@@ -162,7 +168,4 @@ function gameOver(){
     pipes = [];
     score = 0;
     scoreSpan.innerText = score;
-    // alert("Game over! Score : 0");
-    // location.reload();
-    // console.log("Game over")
 }
