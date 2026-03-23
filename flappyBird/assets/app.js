@@ -14,6 +14,10 @@ let upperTowerImg = new Image();
 upperTowerImg.src = "./assets/images/towerDown.png";
 let lowerTowerImg = new Image();
 lowerTowerImg.src = "./assets/images/towerUp.png";
+let groundImg = new Image();
+groundImg.src = "./assets/images/ground1.png";
+let groundImg2 = new Image();
+groundImg2.src = "./assets/images/ground1fl.png";
 
 let bgX = 0;
 let bgSpeed = 7;
@@ -45,12 +49,22 @@ function drawMovingBGImg() {
     }
 }
 
+function drawMovingGround(){
+    ctx.drawImage(groundImg, 0, 148, canvas.width, 40);
+    ctx.drawImage(groundImg2, 0, 148, canvas.width, 40);
+
+    if(bgX <= -canvas.width){
+        bgX = 0;
+    }
+}
+
 function update(){
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawMovingBGImg();
     scoreDiv.innerHTML = `Score : ${score}`;
-    // console.log(scoreSpan.innerText)
+
+    drawMovingGround();
     
     velocity += gravity;
     
